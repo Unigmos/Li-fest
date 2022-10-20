@@ -7,5 +7,7 @@ Life×List
 ## 開発環境
 |||
 |:---|:---|
-|開発プラットフォーム|AndroidStudio|
-|開発言語|Kotlin|
+|開発プラットフォーム|Visual Studio Code|
+|開発言語|HTML, CSS, PHP, Java Script|
+|データベース|mySQL|
+##
