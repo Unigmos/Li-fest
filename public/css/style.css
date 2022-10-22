@@ -19,4 +19,28 @@
   margin-top: 100px;
   margin-bottom: 30px;
 }
+
+.main_container .action_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main_container .action_container .action_button {
+  border: 1px solid #6e6d6d;
+  display: block;
+  text-decoration: none;
+  padding: 2px;
+  margin-right: 10px;
+}
+
+.main_container .action_container .action_button p {
+  color: #252525;
+}
+
+.main_container .action_container .action_button p::before {
+  content: attr(text);
+  padding-right: 10px;
+  color: #252525;
+}
 /*# sourceMappingURL=style.css.map */

@@ -1,5 +1,10 @@
+// 色指定
+$button_border: #6e6d6d;
+$main_background: #fefefe;
+$font_color: #252525;
+
 .header_container{
-    background-color: #fefefe;
+    background-color: $main_background;
     position: fixed;
     width: 100%;
     top: 0;
@@ -17,4 +22,22 @@
     margin-left: auto;
     margin-top: 100px;
     margin-bottom: 30px;
+    .action_container{
+        display: flex;
+        .action_button{
+            border: 1px solid $button_border;
+            display: block;
+            text-decoration: none;
+            padding: 2px;
+            margin-right: 10px;
+            p{
+                color: $font_color;
+                &::before{
+                    content: attr(text);
+                    padding-right: 10px;
+                    color: $font_color;
+                }
+            }
+        }
+    }
 }
