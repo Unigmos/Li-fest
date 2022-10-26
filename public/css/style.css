@@ -43,4 +43,45 @@
   padding-right: 10px;
   color: #252525;
 }
+
+.menu {
+  max-width: 100%;
+}
+
+.menu a {
+  display: block;
+  padding: 15px;
+  text-decoration: none;
+  color: #252525;
+}
+
+.menu .box {
+  height: 0;
+  display: block;
+  background-color: #f4f4f4;
+  border-radius: 20px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+label {
+  display: block;
+  padding: 15px;
+  line-height: 1;
+  color: #252525;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+#day:checked ~ #day_div .box,
+#week:checked ~ #week_div .box,
+#month:checked ~ #month_div .box {
+  height: 54px;
+  opacity: 1;
+}
 /*# sourceMappingURL=style.css.map */
