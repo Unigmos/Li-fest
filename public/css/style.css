@@ -48,11 +48,14 @@
   max-width: 100%;
 }
 
-.menu a {
-  display: block;
-  padding: 15px;
-  text-decoration: none;
-  color: #252525;
+.menu .accordion {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-bottom: 1px solid #252525;
 }
 
 .menu .box {
@@ -70,18 +73,10 @@ label {
   padding: 15px;
   line-height: 1;
   color: #252525;
-  border-bottom: 1px solid #000;
   cursor: pointer;
 }
 
 input {
   display: none;
-}
-
-#day:checked ~ #day_div .box,
-#week:checked ~ #week_div .box,
-#month:checked ~ #month_div .box {
-  height: 54px;
-  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */
