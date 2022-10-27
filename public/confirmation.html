@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Li-fest</title>
     <link rel="stylesheet" href="css/style.css">
+    <script src="js/checkbox.js" async></script>
 </head>
 <body>
     <header>
@@ -32,36 +33,50 @@
             </a>
         </div>
         <div class="menu">
-            <label for="day">日ごと</label>
-            <input type="checkbox" id="day" />
+            <div class="accordion">
+                <label for="day">日ごと</label>
+                <input type="checkbox" id="day" class="day" onclick="Check(this.id)"/>
+                <p>日ごと合計:100円</p>
+            </div>
             <div id="day_div">
                 <div class="box">
-                    <p>a</p>
+                    <p>aa</p>
                 </div>
             </div>
 
-            <label for="week">週ごと</label>
-            <input type="checkbox" id="week" />
+            <div class="accordion">
+                <label for="week">週ごと</label>
+                <input type="checkbox" id="week" class="week" onclick="Check(this.id)"/>
+                <p>週ごと合計:1000円</p>
+            </div>
             <div id="week_div">
                 <div class="box">
-                    <p>a</p>
+                    <p>aa</p>
                 </div>
             </div>
 
-            <label for="month">月ごと</label>
-            <input type="checkbox" id="month" />
+            <div class="accordion">
+                <label for="month">月ごと</label>
+                <input type="checkbox" id="month" class="month" onclick="Check(this.id)"/>
+                <p>月ごと合計:10000円</p>
+            </div>
             <div id="month_div">
                 <div class="box">
-                    <p>a</p>
+                    <p>aa</p>
                 </div>
             </div>
-            <label for="month">年ごと</label>
-            <input type="checkbox" id="year" />
+
+            <div class="accordion">
+                <label for="year">年ごと</label>
+                <input type="checkbox" id="year" class="year" onclick="Check(this.id)"/>
+                <p>年ごと合計:100000円</p>
+            </div>
             <div id="year_div">
                 <div class="box">
-                    <p>a</p>
+                    <p>aa</p>
                 </div>
             </div>
+
         </div>
     </main>
     <footer>
