@@ -3,10 +3,15 @@ function Check(id) {
     var elem_all = document.getElementById(add_id).children;
     var elem_lg = document.getElementById(add_id).childElementCount
 
-    if (document.getElementById(id).checked) {
+    if(document.getElementById(id).checked) {
         for(var i = 0; i < elem_lg; i++){
-            elem_all[i].style.height = "54px"
-            elem_all[i].style.opacity = "1"
+            if(window.innerWidth < 960){
+                elem_all[i].style.height = "162px"
+                elem_all[i].style.opacity = "1"
+            } else{
+                elem_all[i].style.height = "54px"
+                elem_all[i].style.opacity = "1"
+            }
         }
 
     } else {
