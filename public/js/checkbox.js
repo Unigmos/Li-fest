@@ -1,13 +1,18 @@
 function Check(id) {
     var add_id = id + "_div";
-    var elem = document.getElementById(add_id).firstElementChild;
+    var elem_all = document.getElementById(add_id).children;
+    var elem_lg = document.getElementById(add_id).childElementCount
 
     if (document.getElementById(id).checked) {
-        elem.style.height = "54px"
-        elem.style.opacity = "1"
+        for(var i = 0; i < elem_lg; i++){
+            elem_all[i].style.height = "54px"
+            elem_all[i].style.opacity = "1"
+        }
 
     } else {
-        elem.style.height = "0px"
-        elem.style.opacity = "0"
+        for(var i = 0; i < elem_lg; i++){
+            elem_all[i].style.height = "0px"
+            elem_all[i].style.opacity = "0"
+        }
     }
 }
