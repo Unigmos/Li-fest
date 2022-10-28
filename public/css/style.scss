@@ -2,6 +2,9 @@
 $button_border: #6e6d6d;
 $main_background: #fefefe;
 $font_color: #252525;
+$media_size: 960px;
+$media_size_plus: $media_size + 1px;
+
 
 .header_container{
     background-color: $main_background;
@@ -51,7 +54,7 @@ $font_color: #252525;
     }
     .box{
         height: 0;
-        display: block;
+        display: flex;
         background-color:#f4f4f4;
         border-radius: 20px;
         overflow: hidden;
@@ -60,6 +63,29 @@ $font_color: #252525;
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
+        .box_content{
+            // $media_size以上の読み込み(データ縦並び)
+            @media screen and (min-width:$media_size_plus){
+                display: flex;
+                .box_data{
+                    border-right: 1px solid $font_color;
+                    width: calc(100% / 3);
+                }
+            }
+            // $media_size以下の読み込み(データ横並び)
+            @media screen and (max-width:$media_size){
+                display: block;
+                .box_data{
+                    border-right: 1px solid $font_color;
+                    width: 100%;
+                }
+            }
+            width: 95%;
+        }
+        .box_button{
+            width: 5%;
+            margin-left: auto;
+        }
     }
 
 }

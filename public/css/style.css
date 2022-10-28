@@ -60,12 +60,45 @@
 
 .menu .box {
   height: 0;
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background-color: #f4f4f4;
   border-radius: 20px;
   overflow: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+}
+
+.menu .box .box_content {
+  width: 95%;
+}
+
+@media screen and (min-width: 961px) {
+  .menu .box .box_content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .menu .box .box_content .box_data {
+    border-right: 1px solid #252525;
+    width: calc(100% / 3);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .menu .box .box_content {
+    display: block;
+  }
+  .menu .box .box_content .box_data {
+    border-right: 1px solid #252525;
+    width: 100%;
+  }
+}
+
+.menu .box .box_button {
+  width: 5%;
+  margin-left: auto;
 }
 
 label {
