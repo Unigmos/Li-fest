@@ -1,9 +1,13 @@
 // 色指定
 $button_border: #6e6d6d;
-$main_background: #fefefe;
-$font_color: #252525;
+$main_background: #fcfaf7;
+$font_color:  #030300;
 $media_size: 960px;
 $media_size_plus: $media_size + 1px;
+
+$color_one:  #e8ddc1;
+$color_two:  #d0dada;
+$color_three:  #b3a593;
 
 
 .header_container{
@@ -63,6 +67,17 @@ $media_size_plus: $media_size + 1px;
         -ms-transition: all 0.5s;
         -o-transition: all 0.5s;
         transition: all 0.5s;
+        margin-bottom: 2px;
+        .box_describe{
+            display: flex;
+            width: 95%;
+            .box_describe_data{
+                border-right: 1px solid $font_color;
+                width: calc(100% / 3);
+                text-align: center;
+            }
+        }
+
         .box_content{
             // $media_size以上の読み込み(データ縦並び)
             @media screen and (min-width:$media_size_plus){
@@ -70,6 +85,10 @@ $media_size_plus: $media_size + 1px;
                 .box_data{
                     border-right: 1px solid $font_color;
                     width: calc(100% / 3);
+                    p{
+                        margin: 0;
+                        padding: 16px 0;
+                    }
                 }
             }
             // $media_size以下の読み込み(データ横並び)
@@ -78,10 +97,15 @@ $media_size_plus: $media_size + 1px;
                 .box_data{
                     border-right: 1px solid $font_color;
                     width: 100%;
+                    p{
+                        margin: 0;
+                        padding: 16px 0;
+                    }
                 }
             }
             width: 95%;
         }
+        
         .box_button{
             width: 5%;
             margin-left: auto;
@@ -100,4 +124,16 @@ label{
 
 input{
     display: none;
+}
+
+.bg_color_one{
+    background-color: $color_one;
+}
+
+.bg_color_two{
+    background-color: $color_two;
+}
+
+.bg_color_three{
+    background-color: $color_three;
 }

@@ -1,5 +1,5 @@
 .header_container {
-  background-color: #fefefe;
+  background-color: #fcfaf7;
   position: fixed;
   width: 100%;
   top: 0;
@@ -35,13 +35,13 @@
 }
 
 .main_container .action_container .action_button p {
-  color: #252525;
+  color: #030300;
 }
 
 .main_container .action_container .action_button p::before {
   content: attr(text);
   padding-right: 10px;
-  color: #252525;
+  color: #030300;
 }
 
 .menu {
@@ -55,7 +55,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  border-bottom: 1px solid #252525;
+  border-bottom: 1px solid #030300;
 }
 
 .menu .box {
@@ -68,6 +68,20 @@
   overflow: hidden;
   -webkit-transition: all 0.5s;
   transition: all 0.5s;
+  margin-bottom: 2px;
+}
+
+.menu .box .box_describe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 95%;
+}
+
+.menu .box .box_describe .box_describe_data {
+  border-right: 1px solid #030300;
+  width: calc(100% / 3);
+  text-align: center;
 }
 
 .menu .box .box_content {
@@ -81,8 +95,12 @@
     display: flex;
   }
   .menu .box .box_content .box_data {
-    border-right: 1px solid #252525;
+    border-right: 1px solid #030300;
     width: calc(100% / 3);
+  }
+  .menu .box .box_content .box_data p {
+    margin: 0;
+    padding: 16px 0;
   }
 }
 
@@ -91,8 +109,12 @@
     display: block;
   }
   .menu .box .box_content .box_data {
-    border-right: 1px solid #252525;
+    border-right: 1px solid #030300;
     width: 100%;
+  }
+  .menu .box .box_content .box_data p {
+    margin: 0;
+    padding: 16px 0;
   }
 }
 
@@ -105,11 +127,23 @@ label {
   display: block;
   padding: 15px;
   line-height: 1;
-  color: #252525;
+  color: #030300;
   cursor: pointer;
 }
 
 input {
   display: none;
+}
+
+.bg_color_one {
+  background-color: #e8ddc1;
+}
+
+.bg_color_two {
+  background-color: #d0dada;
+}
+
+.bg_color_three {
+  background-color: #b3a593;
 }
 /*# sourceMappingURL=style.css.map */
