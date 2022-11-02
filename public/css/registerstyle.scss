@@ -1,9 +1,13 @@
 // 色指定
 $button_border: #6e6d6d;
-$main_background: #fefefe;
-$font_color: #252525;
+$main_background: #fcfaf7;
+$font_color:  #030300;
 $media_size: 960px;
 $media_size_plus: $media_size + 1px;
+
+$color_one:  #e8ddc1;
+$color_two:  #d0dada;
+$color_three:  #b3a593;
 
 
 .header_container{
@@ -44,27 +48,42 @@ $media_size_plus: $media_size + 1px;
 
 .items{
     display: block;
-    .item_form{
+    form{
         display: block;
-        width: 400px;
         padding: auto;
         margin: auto;
-        border-bottom: 2px solid $button_border;
-        div{
-            display: flex;
-            width: 100%;
-            justify-content:space-between;
-            margin-left: 5px;
-            margin-top: 30px;
-            input{
-                border: 0px;
-            }
-            .content{
-                margin-right: 5px;
-                text-align: right;
+        margin-top: 15%;
+        .item_form{
+            display: block;
+            width: 70%;
+            padding: auto;
+            margin: auto;
+            margin-top: 10%;
+            border-bottom: 2px solid $button_border;
+            div{
+                display: flex;
+                justify-content: space-between;
+                margin-left: 5px;
+                margin-top: 30px;
+                input{
+                    display: block;
+                    padding: 15px;
+                    border: 0px;
+                }
+                select{
+                    display: block;
+                    padding: 15px;
+                    border: 0px;
+                }
+                .content{
+                    margin-right: 5px;
+                    text-align: right;
+                    width: 45%;
+                }
             }
         }
     }
+    
 }
 
 label{
