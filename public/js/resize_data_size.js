@@ -9,39 +9,50 @@ function resizeDataSize(){
         "month_div": document.getElementById("month_div").childElementCount,
         "year_div": document.getElementById("year_div").childElementCount
     };
+    //　ブラウザサイズ
+    var browser_size = 960;
+    // 縦並びの長さ
+    var vertical_px = "162px";
+    // 横並びの高さ
+    var horizontal_px = "54px";
 
-    if(window.innerWidth < 960){
+    if(window.innerWidth < browser_size){
         for(i in elem_list){
-            var elem_first = document.getElementById(i).firstElementChild;
+            var elem_last = document.getElementById(i).lastElementChild;
             var elem = document.getElementById(i).children;
-            if(getComputedStyle(elem_first).height == "54px"){
+            if(getComputedStyle(elem_last).height == horizontal_px){
                 for(var j = 0; j < elem_list[i]; j++){
-                    elem[j].style.height = "162px"
-                    elem[j].style.opacity = "1"
+                    // 最初の要素はブラウザサイズに関係なく横並びのサイズ
+                    if(j == 0){
+                        elem[j].style.height = horizontal_px;
+                    } else {
+                        elem[j].style.height = vertical_px;
+                    }
+                    elem[j].style.opacity = "1";
                 }
             // 開かれていないデータはブラウザをリサイズしても変更しない
-            } else if(getComputedStyle(elem_first).height == "0px"){
+            } else if(getComputedStyle(elem_last).height == "0px"){
                 for(var j = 0; j < elem_list[i]; j++){
-                    elem[j].style.height = "0px"
-                    elem[j].style.opacity = "0"
+                    elem[j].style.height = "0px";
+                    elem[j].style.opacity = "0";
                 }
             }
             
         }
     } else {
         for(i in elem_list){
-            var elem_first = document.getElementById(i).firstElementChild;
+            var elem_last = document.getElementById(i).lastElementChild;
             var elem = document.getElementById(i).children;
-            if(getComputedStyle(elem_first).height == "162px"){
+            if(getComputedStyle(elem_last).height == vertical_px){
                 for(var j = 0; j < elem_list[i]; j++){
-                    elem[j].style.height = "54px"
-                    elem[j].style.opacity = "1"
+                    elem[j].style.height = horizontal_px;
+                    elem[j].style.opacity = "1";
                 }
             // 開かれていないデータはブラウザをリサイズしても変更しない
-            } else if(getComputedStyle(elem_first).height == "0px"){
+            } else if(getComputedStyle(elem_last).height == "0px"){
                 for(var j = 0; j < elem_list[i]; j++){
-                    elem[j].style.height = "0px"
-                    elem[j].style.opacity = "0"
+                    elem[j].style.height = "0px";
+                    elem[j].style.opacity = "0";
                 }
             }
             
