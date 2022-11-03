@@ -18,6 +18,7 @@ function connect(){
 
     try {
         $pdo = new PDO($dsn, $user, $pass, $driver_options);
+        echo "ok";
     } catch (PDOException $e) {
         echo "failed connect".$e->getMessage();
         exit();
