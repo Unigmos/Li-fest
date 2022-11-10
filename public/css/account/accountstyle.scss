@@ -1,0 +1,93 @@
+// 色指定
+$button_border: #6e6d6d;
+$main_background: #fcfaf7;
+$font_color:  #030300;
+$media_size: 960px;
+$media_size_plus: $media_size + 1px;
+
+$color_one:  #e8ddc1;
+$color_two:  #d0dada;
+$color_three:  #b3a593;
+$button_back_color: #ffa500;
+
+
+.header_container{
+    background-color: $main_background;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+}
+
+.shadow{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.main_container{
+    margin-top: 100px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: max-content;
+    div{
+        display: block;
+        height: 120%;
+        margin-top: 10%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 3%;
+        text-align: center;
+        width: 80%;
+        border: 2px solid $font_color;
+        height: max-content;
+        h3{
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10%;
+        }
+        div{
+            border: none;
+            form{
+                display: flex;
+                flex-flow: column;
+                width: fit-content;
+                margin-left: auto;
+                margin-right: auto;
+                input{
+                    display: block;
+                    margin-bottom: 10%;
+                    font-size: 110%;
+                }
+            }
+        }
+    }
+}
+.button{
+    border: none;
+    border-radius: 100vh;
+    color: white;
+    background-color: $button_back_color;
+    border-bottom: 5px solid #b84c00;
+    font-weight: 900;
+    font-size: 110%;
+    cursor: pointer;
+    -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
+    &:hover{
+        background-color: #ff7e42;
+        border-bottom: 2px solid #b84c00;
+        
+        margin-top: 3px;
+    }
+}
+
+
+label{
+    display: block;
+    padding: 15px;
+    line-height: 1;
+    color: $font_color;
+}
+
