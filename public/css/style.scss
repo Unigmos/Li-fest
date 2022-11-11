@@ -169,3 +169,19 @@ input{
 .bg_color_three{
     background-color: $color_three;
 }
+
+#context_menu{
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width:200px;
+    height:75px;
+    border:1px solid #000;
+    background-color:#fff;
+    li{
+        cursor: pointer;
+        list-style: none;
+    }
+}

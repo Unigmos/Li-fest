@@ -185,4 +185,21 @@ input {
 .bg_color_three {
   background-color: #b3a593;
 }
+
+#context_menu {
+  display: none;
+  cursor: pointer;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+  height: 75px;
+  border: 1px solid #000;
+  background-color: #fff;
+}
+
+#context_menu li {
+  cursor: pointer;
+  list-style: none;
+}
 /*# sourceMappingURL=style.css.map */
