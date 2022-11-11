@@ -1,7 +1,16 @@
 window.addEventListener('load', function(){
-    document.getElementById("three_button").addEventListener('click', Position);
+    document.addEventListener('click', (e) => {
+        // ボタン以外を押したら非表示
+        if(!e.target.closest('.three_bt')){
+            document.getElementById('context_menu').style.display = "none";
+        }
+        else{
+            document.getElementById("three_button").addEventListener('click', Position);
+        }
+    })
 });
 
+// コンテクストメニューを表示
 function Position(event) {
     // 要素の大きさ分左上に要素を動かす
     const diff_left = 200;
