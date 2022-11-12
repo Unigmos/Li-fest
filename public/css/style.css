@@ -1,3 +1,7 @@
+body {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
 .header_container {
   background-color: #fcfaf7;
   position: fixed;
@@ -79,7 +83,6 @@
 }
 
 .menu .box .box_describe .box_describe_data {
-  border-right: 1px solid #030300;
   width: calc(100% / 3);
   text-align: center;
 }
@@ -95,7 +98,6 @@
     display: flex;
   }
   .menu .box .box_content .box_data {
-    border-right: 1px solid #030300;
     width: calc(100% / 3);
   }
   .menu .box .box_content .box_data p {
@@ -109,12 +111,11 @@
     display: block;
   }
   .menu .box .box_content .box_data {
-    border-right: 1px solid #030300;
     width: 100%;
   }
   .menu .box .box_content .box_data p {
     margin: 0;
-    padding: 16px 0;
+    padding: 20px 0;
   }
 }
 
@@ -192,14 +193,21 @@ input {
   position: fixed;
   top: 0;
   left: 0;
-  width: 200px;
-  height: 75px;
-  border: 1px solid #000;
+  width: 100px;
   background-color: #fff;
 }
 
-#context_menu li {
+#context_menu ul {
+  padding: 0;
+}
+
+#context_menu ul li {
   cursor: pointer;
   list-style: none;
+}
+
+#context_menu ul li:hover {
+  background-color: gray;
+  color: #fcfaf7;
 }
 /*# sourceMappingURL=style.css.map */

@@ -9,6 +9,9 @@ $color_one:  #e8ddc1;
 $color_two:  #d0dada;
 $color_three:  #b3a593;
 
+body{
+    font-family: 'Kosugi Maru', sans-serif;
+}
 
 .header_container{
     background-color: $main_background;
@@ -72,7 +75,6 @@ $color_three:  #b3a593;
             display: flex;
             width: 95%;
             .box_describe_data{
-                border-right: 1px solid $font_color;
                 width: calc(100% / 3);
                 text-align: center;
             }
@@ -83,7 +85,6 @@ $color_three:  #b3a593;
             @media screen and (min-width:$media_size_plus){
                 display: flex;
                 .box_data{
-                    border-right: 1px solid $font_color;
                     width: calc(100% / 3);
                     p{
                         margin: 0;
@@ -95,11 +96,10 @@ $color_three:  #b3a593;
             @media screen and (max-width:$media_size){
                 display: block;
                 .box_data{
-                    border-right: 1px solid $font_color;
                     width: 100%;
                     p{
                         margin: 0;
-                        padding: 16px 0;
+                        padding: 20px 0;
                     }
                 }
             }
@@ -176,12 +176,17 @@ input{
     position: fixed;
     top: 0;
     left: 0;
-    width:200px;
-    height:75px;
-    border:1px solid #000;
+    width: 100px;
     background-color:#fff;
-    li{
-        cursor: pointer;
-        list-style: none;
+    ul{
+        padding: 0;
+        li{
+            cursor: pointer;
+            list-style: none;
+            &:hover{
+                background-color: gray;
+                color: $main_background;
+            }
+        }
     }
 }
