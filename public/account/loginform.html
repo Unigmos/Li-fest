@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Li-fest</title>
     <link rel="stylesheet" href="/public/css/account/accountstyle.css">
+    <script src="/public/js/checkinput.js" async></script>
 </head>
 <body>
     <header>
@@ -32,9 +33,9 @@
                 <!-- TODO:ログインをするためのphpのリンク -->
                 <form action="" method="post">
                     <!-- TODO:disable追加（jsでabledに変更するの作る） -->
-                    <input type="text" name="phone_num" class="phone_num" placeholder="電話番号">
-                    <input type="password" name="password" class="password" placeholder="パスワード">
-                    <input type="submit" name="login_button" class="button" value="ログイン">
+                    <input type="text" name="phone_num" class="phone_num" placeholder="電話番号" onchange="checkInput()">
+                    <input type="password" name="password" class="password" placeholder="パスワード" onchange="checkInput()">
+                    <input type="submit" name="login_button" class="button" value="ログイン" disabled>
                 </form>
             </div>
         </div>
