@@ -1,6 +1,7 @@
 // 色指定
 $button_border: #6e6d6d;
 $main_background: #fcfaf7;
+$content_background: #eaffed;
 $font_color:  #030300;
 $media_size: 960px;
 $media_size_plus: $media_size + 1px;
@@ -9,6 +10,7 @@ $color_one:  #e8ddc1;
 $color_two:  #d0dada;
 $color_three:  #b3a593;
 $button_back_color: #ffa500;
+$button_disenable: #6e6d6d;
 
 
 .header_container{
@@ -40,7 +42,10 @@ $button_back_color: #ffa500;
         text-align: center;
         width: 80%;
         border: 2px solid $font_color;
+        border-radius: 5px;
+        box-shadow:  0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);
         height: max-content;
+        background-color: $content_background;
         h3{
             width: 80%;
             margin-left: auto;
@@ -49,6 +54,7 @@ $button_back_color: #ffa500;
         }
         div{
             border: none;
+            box-shadow: none;
             form{
                 display: flex;
                 flex-flow: column;
@@ -75,10 +81,13 @@ $button_back_color: #ffa500;
     cursor: pointer;
     -webkit-box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
-    &:hover{
+    &:disabled{
+        background-color: $button_disenable;
+        border-bottom: 2px solid $button_disenable;
+    }
+    &:enabled:hover{
         background-color: #ff7e42;
         border-bottom: 2px solid #b84c00;
-        
         margin-top: 3px;
     }
 }
