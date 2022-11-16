@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Li-fest</title>
     <link rel="stylesheet" href="/public/css/account/accountstyle.css">
+    <script src="/public/js/checkinput.js"></script>
 </head>
 <body>
     <header>
@@ -30,13 +31,12 @@
             </h3>
             <div class="account_register_execution_content">
                 <!-- TODO:アカウント登録するリンク -->
-                <form action="///////" method="post">
-                    <input type="text" name="phone_num" class="phone_num" placeholder="電話番号">
-                    <input type="password" name="password" class="password" placeholder="パスワード">
-                    <input type="text" name="user_name" class="user_name" placeholder="ユーザーネーム">
-                    <input type="submit" name="account_register_button" class="button" value="登録">
+                <form action="" method="post" name="account_register_form">
+                    <input type="text" id="phone_num" class="phone_num" placeholder="電話番号" onchange="buttonActivation()">
+                    <input type="password" id="password" class="password" placeholder="パスワード" onchange="buttonActivation()">
+                    <input type="text" id="user_name" class="user_name" placeholder="ユーザーネーム" onchange="buttonActivation()">
+                    <input type="submit" id="account_register_button" class="button" value="登録" disabled>
                 </form>
-                <!-- TODO:disable追加（jsでabledに変更するの作る） -->
             </div>
             
         </div>

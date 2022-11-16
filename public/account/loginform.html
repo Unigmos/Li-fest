@@ -31,11 +31,10 @@
             </h3>
             <div class="login_execution_contener">
                 <!-- TODO:ログインをするためのphpのリンク -->
-                <form action="" method="post">
-                    <!-- TODO:disable追加（jsでabledに変更するの作る） -->
-                    <input type="text" name="phone_num" class="phone_num" placeholder="電話番号" onchange="checkInput()">
-                    <input type="password" name="password" class="password" placeholder="パスワード" onchange="checkInput()">
-                    <input type="submit" name="login_button" class="button" value="ログイン" disabled>
+                <form action="" method="post" name="login_form">
+                    <input type="text" id="phone_num" class="phone_num" placeholder="電話番号" onchange="buttonActivation()">
+                    <input type="password" id="password" class="password" placeholder="パスワード" onchange="buttonActivation()">
+                    <input type="submit" id="login_button" class="button" value="ログイン" disabled>
                 </form>
             </div>
         </div>
