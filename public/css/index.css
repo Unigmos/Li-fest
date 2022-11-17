@@ -1,0 +1,142 @@
+body {
+  font-family: 'Kosugi Maru', sans-serif;
+}
+
+.header_container {
+  background-color: #fcfaf7;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 50;
+}
+
+.header_container a {
+  display: block;
+}
+
+.header_container a h1 {
+  margin: 10px 0;
+}
+
+.header_container a h1 img {
+  max-height: 50px;
+  width: auto;
+}
+
+.shadow {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.main_container {
+  max-width: 800px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  margin-bottom: 30px;
+}
+
+.main_container .title_description h2 {
+  text-align: center;
+}
+
+.main_container .title_description p {
+  text-align: center;
+}
+
+.main_container .top_image {
+  margin-top: 20px;
+}
+
+.main_container .top_image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.main_container .how_to_use {
+  margin-top: 20px;
+}
+
+.main_container .how_to_use .index_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main_container .how_to_use .index_title::before, .main_container .how_to_use .index_title::after {
+  border-top: 2px solid #000;
+  content: '';
+  width: 30px;
+  margin: 0 20px;
+}
+
+.main_container .how_to_use .index_title::before {
+  margin-left: 15px;
+}
+
+.main_container .how_to_use .index_title::after {
+  margin-right: 15px;
+}
+
+.main_container .how_to_use .index_title h2 {
+  text-align: center;
+}
+
+.main_container .how_to_use .index_content .use_content_box {
+  margin-top: 20px;
+}
+
+@media screen and (min-width: 961px) {
+  .main_container .how_to_use .index_content .use_content_box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .main_container .how_to_use .index_content .use_content_box .use_sentence {
+    width: 50%;
+  }
+  .main_container .how_to_use .index_content .use_content_box .use_image {
+    width: 50%;
+  }
+  .main_container .how_to_use .index_content .use_content_box .use_image img {
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .main_container .how_to_use .index_content .use_content_box:first-child {
+    margin-top: 0px;
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .main_container .how_to_use .index_content .use_content_box {
+    display: block;
+    text-align: center;
+  }
+  .main_container .how_to_use .index_content .use_content_box .use_sentence {
+    width: 100%;
+  }
+  .main_container .how_to_use .index_content .use_content_box .use_image {
+    width: 100%;
+  }
+  .main_container .how_to_use .index_content .use_content_box .use_image img {
+    max-width: 100%;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .main_container .how_to_use .index_content .use_content_box:first-child {
+    margin-top: 0px;
+  }
+}
+/*# sourceMappingURL=index.css.map */
