@@ -32,4 +32,5 @@ function Replace(){
     }
 }
 
+window.addEventListener('load', Replace);
 window.addEventListener('resize', Replace);
