@@ -1,5 +1,6 @@
 body {
   font-family: 'Kosugi Maru', sans-serif;
+  margin: 0;
 }
 
 .header_container {
@@ -60,7 +61,7 @@ body {
   margin-top: 20px;
 }
 
-.main_container .how_to_use .index_title {
+.main_container .how_to_use .how_to_use_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -72,71 +73,96 @@ body {
           justify-content: center;
 }
 
-.main_container .how_to_use .index_title::before, .main_container .how_to_use .index_title::after {
+.main_container .how_to_use .how_to_use_title::before, .main_container .how_to_use .how_to_use_title::after {
   border-top: 2px solid #000;
   content: '';
   width: 30px;
   margin: 0 20px;
 }
 
-.main_container .how_to_use .index_title::before {
+.main_container .how_to_use .how_to_use_title::before {
   margin-left: 15px;
 }
 
-.main_container .how_to_use .index_title::after {
+.main_container .how_to_use .how_to_use_title::after {
   margin-right: 15px;
 }
 
-.main_container .how_to_use .index_title h2 {
+.main_container .how_to_use .how_to_use_title h2 {
   text-align: center;
 }
 
-.main_container .how_to_use .index_content .use_content_box {
+.main_container .how_to_use .how_to_use_content .use_content_box {
   margin-top: 20px;
 }
 
 @media screen and (min-width: 961px) {
-  .main_container .how_to_use .index_content .use_content_box {
+  .main_container .how_to_use .how_to_use_content .use_content_box {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }
-  .main_container .how_to_use .index_content .use_content_box .use_sentence {
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_sentence {
+    width: 50%;
+    display: table;
+  }
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_sentence p {
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10%;
+    color: #030300;
+  }
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_image {
     width: 50%;
   }
-  .main_container .how_to_use .index_content .use_content_box .use_image {
-    width: 50%;
-  }
-  .main_container .how_to_use .index_content .use_content_box .use_image img {
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_image img {
     max-width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
   }
-  .main_container .how_to_use .index_content .use_content_box:first-child {
+  .main_container .how_to_use .how_to_use_content .use_content_box:first-child {
     margin-top: 0px;
   }
 }
 
 @media screen and (max-width: 960px) {
-  .main_container .how_to_use .index_content .use_content_box {
+  .main_container .how_to_use .how_to_use_content .use_content_box {
     display: block;
     text-align: center;
   }
-  .main_container .how_to_use .index_content .use_content_box .use_sentence {
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_sentence {
     width: 100%;
   }
-  .main_container .how_to_use .index_content .use_content_box .use_image {
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_sentence p {
+    color: #030300;
+  }
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_image {
     width: 100%;
   }
-  .main_container .how_to_use .index_content .use_content_box .use_image img {
+  .main_container .how_to_use .how_to_use_content .use_content_box .use_image img {
     max-width: 100%;
     -o-object-fit: contain;
        object-fit: contain;
   }
-  .main_container .how_to_use .index_content .use_content_box:first-child {
+  .main_container .how_to_use .how_to_use_content .use_content_box:first-child {
     margin-top: 0px;
   }
+}
+
+.footer_container {
+  background-color: #fcfaf7;
+  width: 100%;
+  z-index: 50;
+}
+
+.footer_container a {
+  display: block;
+}
+
+.footer_container a p {
+  color: #030300;
+  margin: 0;
 }
 /*# sourceMappingURL=index.css.map */
