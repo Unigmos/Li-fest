@@ -75,7 +75,7 @@ $button_disenable: #6e6d6d;
     border-radius: 100vh;
     color: white;
     background-color: $button_back_color;
-    border-bottom: 5px solid #b84c00;
+    border-bottom: 5px solid $button_disenable;
     font-weight: 900;
     font-size: 110%;
     cursor: pointer;
@@ -83,7 +83,6 @@ $button_disenable: #6e6d6d;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     &:disabled{
         background-color: $button_disenable;
-        border-bottom: 2px solid $button_disenable;
     }
     &:enabled:hover{
         background-color: #ff7e42;
