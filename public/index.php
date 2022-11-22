@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Tree,Shaneron">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="このページは登録した情報の確認ページになります。「新規追加」から新しいデータの追加、「全削除」から登録した全てのデータの削除を行うことができ、個々のボタンからそのデータのみ「編集」、「削除」を行うことができます。">
-    <title>Li-fest</title>
+    <!-- head -->
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html";?>
     <link rel="stylesheet" href="css/index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,24 +10,16 @@
     <script src="js/replace.js" async></script>
 </head>
 <body>
-    <header>
-        <div class="header_container shadow">
-            <!-- TODO:HOME？にするのかconfirmationにするのか -->
-            <a href="#">
-                <h1>
-                    <img src="image/Li-fest_transparent.png" alt="logo">
-                </h1>
-            </a>
-        </div>
-    </header>
+    <!-- header -->
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html" ?>
     <main class="main_container">
         <div class="title_description">
             <h2>Li-festへようこそ！！</h2>
             <!-- TODO:文面考える(今はGitHubのAboutと同じこと書いてある) -->
             <p>Li-festは生活必需品の購入頻度に応じて金額と製品をリストアップするアプリケーションです！</p>
             <!-- TODO:要変更 （aタグのレイアウトとか表記の仕方） -->
-            <label>初めてご利用の方は<a href="./account/account_registerfrom.html">こちら</a></label>
-            <label>ログインは<a href="./account/loginform.html">こちら</a></label>
+            <label>初めてご利用の方は<a href="./account/account_registerfrom.php">こちら</a></label>
+            <label>ログインは<a href="./account/loginform.php">こちら</a></label>
         </div>
         <div class="top_image">
             <img src="image/Li-fest.png" alt="サムネイル">
@@ -63,13 +51,7 @@
             </div>
         </div>
     </main>
-    <footer>
-        <div class="footer_container">
-            <!-- TODO:リンク先指定 -->
-            <a href="#">
-                <p>ここにフッター</p>
-            </a>
-        </div>
-    </footer>
+    <!-- footer -->
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.html";?>
 </body>
 </html>
