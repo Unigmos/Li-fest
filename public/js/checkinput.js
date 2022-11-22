@@ -1,30 +1,34 @@
 var button;
-console.log(document.forms);
 var formlength = document.forms[0].length;
-// TODO:account_registerのほうでlengthがなぜかエラー
 var inputs = new Array(formlength-1);
 for (let i = 0; i < formlength; i++) {
-    let input = document.forms[0].elements[i];
-    if(input.type=="text" || input.type=="password"){
-        inputs[i] = document.forms[0].elements[i];
-        console.log(inputs[i]);
-    }else if(input.type=="submit"){
-        button = input;
-    }
-}
-
-
-function buttonActivation(){
-    if (inputs.every(checkInput)!="") {
-        button.removeAttribute("disabled");
-    }else{
-        if (!button.hasAttribute("disabled")) {
-            button.setAttribute("disabled","disabled");
+    let elements = document.forms[0].elements[i];
+    // タグ名がinputでかつtypeがtxstかpassword
+    if(elements.tagName=="INPUT"){
+        if(elements.type=="text" || elements.type=="password"){
+            inputs[i] = elements;
+        }else if(elements.type=="submit"){
+            button = elements;
+            button.setAttribute("disabled", "disabled");
         }
     }
 }
 
+
+function buttonavAilability(){
+    //配列の要素全てをcheckinput
+    if (inputs.every(checkInput)) {
+        // 1つでも空欄だと
+        button.removeAttribute("disabled");
+    }else{
+        // 全部何かしらの文字が入っていると
+        button.setAttribute("disabled", "disabled");
+    }
+}
+// inputのtxet||passwordの欄に文字が入っているか
 function checkInput(input){
+    // 空欄だったらfalseを返す
+    // TODO:条件分岐でpasswordだったら8文字以上かどうかも追加
     return input.value!="";
 }
 
