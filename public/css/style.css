@@ -1,32 +1,9 @@
 body {
-  font-family: 'Kosugi Maru', sans-serif;
-}
-
-.header_container {
-  background-color: #fcfaf7;
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 50;
-}
-
-.header_container a {
-  display: block;
-}
-
-.header_container a h1 {
-  margin: 10px 0;
-}
-
-.header_container a h1 img {
-  max-height: 50px;
-  width: auto;
+  font-family: "Kosugi Maru", sans-serif;
 }
 
 .shadow {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
 .main_container {
@@ -36,13 +13,9 @@ body {
   margin-top: 100px;
   margin-bottom: 30px;
 }
-
 .main_container .action_container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .main_container .action_container .action_button {
   border: 1px solid #6e6d6d;
   display: block;
@@ -50,11 +23,9 @@ body {
   padding: 2px;
   margin-right: 10px;
 }
-
 .main_container .action_container .action_button p {
   color: #030300;
 }
-
 .main_container .action_container .action_button p::before {
   content: attr(text);
   padding-right: 10px;
@@ -64,61 +35,43 @@ body {
 .menu {
   max-width: 100%;
 }
-
 .menu .accordion {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   border-bottom: 1px solid #030300;
 }
-
 .menu .box {
   height: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   background-color: #f4f4f4;
   border-radius: 20px;
   overflow: hidden;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   margin-bottom: 2px;
 }
-
 .menu .box .box_describe {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 95%;
 }
-
 .menu .box .box_describe .box_describe_data {
-  width: calc(100% / 3);
+  width: 33.3333333333%;
   text-align: center;
 }
-
 .menu .box .box_content {
   width: 95%;
 }
-
 @media screen and (min-width: 961px) {
   .menu .box .box_content {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   .menu .box .box_content .box_data {
-    width: calc(100% / 3);
+    width: 33.3333333333%;
   }
   .menu .box .box_content .box_data p {
     margin: 0;
     padding: 16px 0;
   }
 }
-
 @media screen and (max-width: 960px) {
   .menu .box .box_content {
     display: block;
@@ -131,22 +84,14 @@ body {
     padding: 20px 0;
   }
 }
-
 .menu .box .box_button {
   width: 5%;
   margin-left: auto;
   border-radius: 50%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .menu .box .box_button button {
   border-radius: 50%;
   border: none;
@@ -155,19 +100,11 @@ body {
   width: 30px;
   height: 30px;
   margin: auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
-
 .menu .box .box_button button:hover {
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
   background-color: #d9d9d9;
 }
@@ -181,7 +118,7 @@ label {
 }
 
 .material-symbols-outlined {
-  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+  font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 48;
 }
 
 input {
@@ -209,18 +146,14 @@ input {
   width: 100px;
   background-color: #fff;
 }
-
 #context_menu ul {
   padding: 0;
 }
-
 #context_menu ul li {
   cursor: pointer;
   list-style: none;
 }
-
 #context_menu ul li:hover {
   background-color: gray;
   color: #fcfaf7;
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

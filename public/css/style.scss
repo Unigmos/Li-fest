@@ -13,24 +13,6 @@ body{
     font-family: 'Kosugi Maru', sans-serif;
 }
 
-.header_container{
-    background-color: $main_background;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    a{
-        display: block;
-        h1{
-            margin: 10px 0;
-            img{
-                max-height: 50px;
-                width: auto;
-            }
-        }
-    }
-}
 
 .shadow{
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
