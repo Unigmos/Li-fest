@@ -9,6 +9,10 @@ $color_one:  #e8ddc1;
 $color_two:  #d0dada;
 $color_three:  #b3a593;
 
+body{
+    font-family: 'Kosugi Maru', sans-serif;
+    margin: 0;
+}
 
 .header_container{
     background-color: $main_background;
@@ -17,6 +21,16 @@ $color_three:  #b3a593;
     top: 0;
     left: 0;
     z-index: 50;
+    a{
+        display: block;
+        h1{
+            margin: 10px 0;
+            img{
+                max-height: 50px;
+                width: auto;
+            }
+        }
+    }
 }
 
 .shadow{

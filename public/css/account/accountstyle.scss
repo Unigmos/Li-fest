@@ -12,6 +12,10 @@ $color_three:  #b3a593;
 $button_back_color: #ffa500;
 $button_disenable: #6e6d6d;
 
+body{
+    font-family: 'Kosugi Maru', sans-serif;
+    margin: 0;
+}
 
 .header_container{
     background-color: $main_background;
@@ -20,6 +24,16 @@ $button_disenable: #6e6d6d;
     top: 0;
     left: 0;
     z-index: 50;
+    a{
+        display: block;
+        h1{
+            margin: 10px 0;
+            img{
+                max-height: 50px;
+                width: auto;
+            }
+        }
+    }
 }
 
 .shadow{

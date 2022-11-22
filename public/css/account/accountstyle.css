@@ -1,3 +1,8 @@
+body {
+  font-family: "Kosugi Maru", sans-serif;
+  margin: 0;
+}
+
 .header_container {
   background-color: #fcfaf7;
   position: fixed;
@@ -5,6 +10,16 @@
   top: 0;
   left: 0;
   z-index: 50;
+}
+.header_container a {
+  display: block;
+}
+.header_container a h1 {
+  margin: 10px 0;
+}
+.header_container a h1 img {
+  max-height: 50px;
+  width: auto;
 }
 
 .shadow {
