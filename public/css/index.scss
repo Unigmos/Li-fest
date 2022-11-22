@@ -1,0 +1,146 @@
+// 色指定
+$main_background: #fcfaf7;
+$font_color:  #030300;
+
+// 要素サイズ指定
+$main_width: 800px;
+$media_size: 960px;
+$media_size_plus: $media_size + 1px;
+$box_margin: 20px;
+
+body{
+    font-family: 'Kosugi Maru', sans-serif;
+    margin: 0;
+}
+
+.header_container{
+    background-color: $main_background;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    a{
+        display: block;
+        h1{
+            margin: 10px 0;
+            img{
+                max-height: 50px;
+                width: auto;
+            }
+        }
+    }
+}
+
+.shadow{
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.main_container{
+    max-width: $main_width;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    .title_description{
+        h2{
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    }
+    .top_image{
+        margin-top: $box_margin;
+        img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .how_to_use{
+        margin-top: $box_margin;
+        .how_to_use_title{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            &::before, &::after{
+                border-top: 2px solid #000;
+                content: '';
+                width: 30px;
+                margin: 0 20px;
+            }
+            &::before{
+                margin-left: 15px;
+            }
+            &::after{
+                margin-right: 15px;
+            }
+            h2{
+                text-align: center; 
+            }
+        }
+        .how_to_use_content{
+            .use_content_box{
+                @media screen and (min-width:$media_size_plus){
+                    display: flex;
+                    flex-wrap: wrap;
+                    .use_sentence{
+                        width: 50%;
+                        display: table;
+                        p{
+                            display: table-cell;
+                            vertical-align: middle;
+                            padding: 0 10%;
+                            color: $font_color;
+                        }
+                    }
+                    .use_image{
+                        width: 50%;
+                        img{
+                            max-width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    &:first-child{
+                        margin-top: 0px;
+                    }
+                }
+                @media screen and (max-width:$media_size){
+                    display: block;
+                    text-align: center;
+                    .use_sentence{
+                        width: 100%;
+                        p{
+                            color: $font_color;
+                        }
+                    }
+                    .use_image{
+                        width: 100%;
+                        img{
+                            max-width: 100%;
+                            object-fit: contain;
+                        }
+                    }
+                    &:first-child{
+                        margin-top: 0px;
+                    }
+                }
+                margin-top: $box_margin;
+            }
+        }
+    }
+}
+
+.footer_container{
+    background-color: $main_background;
+    width: 100%;
+    z-index: 50;
+    a{
+        display: block;
+        p{
+            color: $font_color;
+            margin: 0;
+        }
+    }
+}
