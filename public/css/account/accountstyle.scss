@@ -1,39 +1,19 @@
 // 色指定
-$button_border: #6e6d6d;
 $main_background: #fcfaf7;
 $content_background: #eaffed;
 $font_color:  #030300;
-$media_size: 960px;
-$media_size_plus: $media_size + 1px;
-
-$color_one:  #e8ddc1;
-$color_two:  #d0dada;
-$color_three:  #b3a593;
 $button_back_color: #ffa500;
 $button_disenable: #6e6d6d;
+
+// 要素サイズ指定
+$main_width: 800px;
+$media_size: 960px;
+$media_size_plus: $media_size + 1px;
+$box_margin: 20px;
 
 body{
     font-family: 'Kosugi Maru', sans-serif;
     margin: 0;
-}
-
-.header_container{
-    background-color: $main_background;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 50;
-    a{
-        display: block;
-        h1{
-            margin: 10px 0;
-            img{
-                max-height: 50px;
-                width: auto;
-            }
-        }
-    }
 }
 
 .shadow{
@@ -41,11 +21,12 @@ body{
 }
 
 .main_container{
-    margin-top: 100px;
-    display: block;
+    max-width: $main_width;
     margin-left: auto;
     margin-right: auto;
-    width: max-content;
+    margin-top: 100px;
+    margin-bottom: 30px;
+    display: block;
     div{
         display: block;
         height: 120%;
@@ -58,7 +39,6 @@ body{
         border: 2px solid $font_color;
         border-radius: 5px;
         box-shadow:  0px 8px 10px 1px rgb(0 0 0 / 14%), 0px 3px 14px 2px rgb(0 0 0 / 12%), 0px 5px 5px -3px rgb(0 0 0 / 20%);
-        height: max-content;
         background-color: $content_background;
         h3{
             width: 80%;
@@ -72,12 +52,12 @@ body{
             form{
                 display: flex;
                 flex-flow: column;
-                width: fit-content;
+                max-width: fit-content;
                 margin-left: auto;
                 margin-right: auto;
                 input{
                     display: block;
-                    margin-bottom: 10%;
+                    margin-bottom: 40px;
                     font-size: 110%;
                 }
             }
@@ -88,8 +68,6 @@ body{
     border: none;
     border-radius: 100vh;
     color: white;
-    background-color: $button_back_color;
-    border-bottom: 5px solid $button_disenable;
     font-weight: 900;
     font-size: 110%;
     cursor: pointer;
@@ -97,13 +75,18 @@ body{
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     &:disabled{
         background-color: $button_disenable;
+        border-bottom: 5px solid $button_disenable;
         cursor: not-allowed;
     }
-    &:enabled:hover{
-        background-color: #ff7e42;
-        border-bottom: 2px solid #b84c00;
-        margin-top: 3px;
-        cursor: pointer;
+    &:enabled{
+        background-color: $button_back_color;
+        border-bottom: 5px solid #b84c00;
+        &:hover{
+            background-color: #ff7e42;
+            border-bottom: 2px solid #b84c00;
+            margin-top: 3px;
+            cursor: pointer;
+        }
     }
 }
 
