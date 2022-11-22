@@ -1,0 +1,16 @@
+// 色指定
+$main_background: #fcfaf7;
+$font_color:  #030300;
+
+.footer_container{
+    background-color: $main_background;
+    width: 100%;
+    z-index: 50;
+    a{
+        display: block;
+        p{
+            color: $font_color;
+            margin: 0;
+        }
+    }
+}

@@ -1,0 +1,12 @@
+.footer_container {
+  background-color: #fcfaf7;
+  width: 100%;
+  z-index: 50;
+}
+.footer_container a {
+  display: block;
+}
+.footer_container a p {
+  color: #030300;
+  margin: 0;
+}/*# sourceMappingURL=footer.css.map */
