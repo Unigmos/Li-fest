@@ -83,11 +83,13 @@ $button_disenable: #6e6d6d;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     &:disabled{
         background-color: $button_disenable;
+        cursor: not-allowed;
     }
     &:enabled:hover{
         background-color: #ff7e42;
         border-bottom: 2px solid #b84c00;
         margin-top: 3px;
+        cursor: pointer;
     }
 }
 
