@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Li-fest</title>
     <link rel="stylesheet" href="/public/css/account/accountstyle.css">
-    <script src="/public/js/checkinput.js"></script>
+    <script src="/public/js/checkinput.js" async></script>
 </head>
 <body>
     <header>
@@ -31,11 +31,11 @@
             </h3>
             <div class="account_register_execution_content">
                 <!-- TODO:アカウント登録するリンク -->
-                <form action="" method="post" name="account_register_form">
-                    <input type="text" id="phone_num" class="phone_num" placeholder="電話番号" onchange="buttonActivation()">
-                    <input type="password" id="password" class="password" placeholder="パスワード" onchange="buttonActivation()">
-                    <input type="text" id="user_name" class="user_name" placeholder="ユーザーネーム" onchange="buttonActivation()">
-                    <input type="submit" id="account_register_button" class="button" value="登録" disabled>
+                <form action="./loginform.html" method="post" name="account_register_form">
+                    <input type="text" id="phone_num" class="phone_num" placeholder="電話番号" onkeyup="buttonavAilability()">
+                    <input type="password" id="password" class="password" placeholder="パスワード" onkeyup="buttonavAilability()">
+                    <input type="text" id="user_name" class="user_name" placeholder="ユーザーネーム" onkeyup="buttonavAilability()">
+                    <input type="submit" id="account_register_button" class="button" value="登録">
                 </form>
             </div>
             
