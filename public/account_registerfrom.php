@@ -3,7 +3,7 @@
 <head>
     <!-- head -->
     <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html";?>
-    <link rel="stylesheet" href="/public/css/account/accountstyle.css">
+    <link rel="stylesheet" href="/public/css/accountstyle.css">
     <script src="/public/js/checkinput.js" async></script>
 </head>
 <body>
@@ -19,8 +19,8 @@
                 生活を便利に過ごすために活用してみよう
             </h3>
             <div class="account_register_execution_content">
-                <!-- TODO:アカウント登録するリンク -->
-                <form action="" method="post" name="account_register_form">
+                <!-- TODO:post受信上手くいかない -->
+                <form action="/public/account/account_register.php" method="post" name="account_register_form">
                     <input type="text" id="email" class="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
                     <input type="password" id="password" class="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                     <input type="submit" id="account_register_button" class="button" value="登録">
@@ -36,6 +36,6 @@
         </div>
     </main>
     <!-- footer -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.html";?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php";?>
 </body>
 </html>
