@@ -1,25 +1,14 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Tree,Shaneron">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Li-fest</title>
+    <!-- head -->
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
     <link rel="stylesheet" href="css/registerstyle.css">
     <script src="js/resize_data_size.js" async></script>
 </head>
 <body>
-    <header>
-        <div class="header_container shadow">
-            <!-- TODO:HOME？にするのかconfirmationにするのか -->
-            <a href="#####">
-                <h1>
-                    <img src="https://placehold.jp/30x30.png" alt="logo">
-                </h1>
-            </a>
-        </div>
-    </header>
+    <!-- header -->
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html"); ?>
     <main class="main_container">
         <div class="items">
             <!-- TODO:アイテムを保存する用のphpファイルのリンク -->
@@ -59,8 +48,7 @@
             </form>
         </div>
     </main>
-    <footer>
-
-    </footer>
+    <!-- footer -->
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.html");?>
 </body>
 </html>
