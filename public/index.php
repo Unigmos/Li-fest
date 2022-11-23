@@ -18,7 +18,7 @@
         <div class="title_description">
             <h2>Li-festへようこそ！！</h2>
             <!-- TODO:文面考える(今はGitHubのAboutと同じこと書いてある) -->
-            <p>Li-festは生活必需品の購入頻度に応じて金額と製品をリストアップするアプリケーションです！</p>
+            <p>Li-festは生活必需品やサブスクリプションの購入頻度に応じて金額と製品をリストアップするアプリケーションです！</p>
             <!-- TODO:要変更 （aタグのレイアウトとか表記の仕方） -->
             <label>初めてご利用の方は<a href="./account/account_registerfrom.php">こちら</a></label>
             <label>ログインは<a href="./account/loginform.php">こちら</a></label>
