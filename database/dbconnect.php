@@ -19,6 +19,7 @@ function accountDbConnect(){
     try {
         $pdo = new PDO($dsn, $user, $pass, $driver_options);
         echo "ok";
+        return $pdo;
     } catch (PDOException $e) {
         echo "failed connect".$e->getMessage();
         exit();
@@ -43,6 +44,7 @@ function itemDbConnect(){
     try {
         $pdo = new PDO($dsn, $user, $pass, $driver_options);
         echo "ok2";
+        return $pdo;
     } catch (PDOException $e) {
         echo "failed connect".$e->getMessage();
         exit();
