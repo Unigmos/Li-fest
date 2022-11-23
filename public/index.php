@@ -54,6 +54,6 @@
         </div>
     </main>
     <!-- footer -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php");?>
 </body>
 </html>
