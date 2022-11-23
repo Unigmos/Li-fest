@@ -1,12 +1,8 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="author" content="Tree,Shaneron">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="このページは登録した情報の確認ページになります。「新規追加」から新しいデータの追加、「全削除」から登録した全てのデータの削除を行うことができ、個々のボタンからそのデータのみ「編集」、「削除」を行うことができます。">
-    <title>Li-fest</title>
+    <!-- head -->
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/reuse/header.css">
     <link rel="stylesheet" href="css/reuse/footer.css">
@@ -20,16 +16,8 @@
     <script src="js/context_menu.js" async></script>
 </head>
 <body>
-    <header>
-        <div class="header_container shadow">
-            <!-- TODO:HOME？にするのかconfirmationにするのか -->
-            <a href="#">
-                <h1>
-                    <img src="image/Li-fest_transparent.png" alt="logo">
-                </h1>
-            </a>
-        </div>
-    </header>
+    <!-- header -->
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html"); ?>
 
     <div id="context_menu">
         <ul>
@@ -260,9 +248,7 @@
 
         </div>
     </main>
-    <footer>
-
-    </footer>
-    <script></script>
+    <!-- footer -->
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.html");?>
 </body>
 </html>
