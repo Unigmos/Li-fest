@@ -21,9 +21,8 @@
             <div class="account_register_execution_content">
                 <!-- TODO:アカウント登録するリンク -->
                 <form action="" method="post" name="account_register_form">
-                    <input type="text" id="phone_num" class="phone_num" placeholder="電話番号" onkeyup="buttonavAilability()">
+                    <input type="text" id="email" class="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
                     <input type="password" id="password" class="password" placeholder="パスワード" onkeyup="buttonavAilability()">
-                    <input type="text" id="user_name" class="user_name" placeholder="ユーザーネーム" onkeyup="buttonavAilability()">
                     <input type="submit" id="account_register_button" class="button" value="登録">
                 </form>
             </div>

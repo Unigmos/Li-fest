@@ -21,7 +21,7 @@
             <div class="login_execution_contener">
                 <!-- TODO:ログインをするためのphpのリンク -->
                 <form action="" method="post" name="login_form">
-                    <input type="text" id="phone_num" class="phone_num" placeholder="電話番号" onkeyup="buttonavAilability()">
+                    <input type="text" id="email" class="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
                     <input type="password" id="password" class="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                     <input type="submit" id="login_button" class="button" value="ログイン">
                 </form>
