@@ -8,7 +8,6 @@ class Account{
      * @param array $info
      * @return bool
      */
-    const TABLE_NAME = "accountinfo";
     public static function createAccount($info){
         $result = false;
         $sql = 'INSERT INTO accountinfo (email, pass) VALUES(?, ?)';
@@ -28,8 +27,21 @@ class Account{
      * @param array $info
      * @return bool
      */
-    public static function selectAcount($info){
-        
+    public static function loginAcount($info){
+        $result = false;
+        $sql = 'SELECT * FROM accountinfo WHERE email=? and pass=?';
+        $array = [];
+        $array[] = $info["email"];
+        $array[] = $info["password"];
+        try {
+            $stmt = connect()->prepare($sql);
+            $stmt->execute($array);
+            // $result = $stmt->fetch();
+            $result = true;
+            return $result;
+        } catch (\Exception $e) {
+            return $e;
+        }
     }
 }
 
