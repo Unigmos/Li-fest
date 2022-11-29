@@ -1,13 +1,5 @@
-// 色指定
-$button_border: #6e6d6d;
-$main_background: #fcfaf7;
-$font_color:  #030300;
-$media_size: 960px;
-$media_size_plus: $media_size + 1px;
-
-$color_one:  #e8ddc1;
-$color_two:  #d0dada;
-$color_three:  #b3a593;
+@import "reuse/color.scss";
+@import "reuse/size.scss";
 
 body{
     font-family: 'Kosugi Maru', sans-serif;
@@ -55,7 +47,7 @@ body{
         height: 0;
         display: flex;
         background-color:#f4f4f4;
-        border-radius: 20px;
+        border-radius: 7.5px;
         overflow: hidden;
         -webkit-transition: all 0.5s;
         -moz-transition: all 0.5s;
@@ -73,7 +65,7 @@ body{
         }
 
         .box_content{
-            // $media_size以上の読み込み(データ縦並び)
+            // $media_size以上の読み込み(データ横並び)
             @media screen and (min-width:$media_size_plus){
                 display: flex;
                 .box_data{
@@ -84,7 +76,7 @@ body{
                     }
                 }
             }
-            // $media_size以下の読み込み(データ横並び)
+            // $media_size以下の読み込み(データ縦並び)
             @media screen and (max-width:$media_size){
                 display: block;
                 .box_data{

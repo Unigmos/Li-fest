@@ -1,0 +1,7 @@
+// 要素サイズ指定
+// index.scss等で用いられる要素の横幅サイズ
+$main_width: 800px;
+
+// footer.scssやconfirmation.scss等で用いられるメディアクエリ用のサイズ
+$media_size: 960px;
+$media_size_plus: $media_size + 1px;
