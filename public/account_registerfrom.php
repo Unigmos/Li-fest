@@ -19,10 +19,9 @@
                 生活を便利に過ごすために活用してみよう
             </h3>
             <div class="account_register_execution_content">
-                <!-- TODO:post受信上手くいかない -->
                 <form action="/public/account/account_register.php" method="post" name="account_register_form">
-                    <input type="text" id="email" class="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
-                    <input type="password" id="password" class="password" placeholder="パスワード" onkeyup="buttonavAilability()">
+                    <input type="text" id="email" name="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
+                    <input type="password" id="password" name="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                     <input type="submit" id="account_register_button" class="button" value="登録">
                 </form>
             </div>
