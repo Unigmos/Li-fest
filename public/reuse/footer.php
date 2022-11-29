@@ -4,6 +4,7 @@
         <div class="centering">
             <img src="/public/image/Li-fest_transparent.png" alt="logo">
         </div>
+        <!-- TODO:要素数が足りない時には画面下部に固定するjsの作成 -->
         <!-- TODO:リンク先指定 -->
         <div class="footer_nav">
             <ul class="footer_nav_ul">
