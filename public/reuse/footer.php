@@ -8,7 +8,7 @@
         <div class="footer_nav">
             <ul class="footer_nav_ul">
                 <li><a href="#">利用規約</a></li>
-                <li><a href="#">開発者情報</a></li>
+                <li><a href="/public/dev_info.php">開発者情報</a></li>
                 <li><a href="#">プライバシーポリシー</a></li>
                 <li><a href="#">お問い合わせ</a></li>
             </ul>
