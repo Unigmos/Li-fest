@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
+    <script src="js/under_fix.js" async></script>
 </head>
 <body>
     <!-- header -->
@@ -31,6 +32,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="dev_box">
             <div class="dev_image">
