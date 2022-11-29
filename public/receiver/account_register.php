@@ -16,7 +16,7 @@ if ($hasCreated == true) {
     header("location: /public/loginform.php");
     exit();
 }else{
-    // TODO:エラーメッセージ送信
+    // TODO:エラーメッセージ送信　このemailは登録済みです
     header("location: /public/account_registerform.php");
 }
 
