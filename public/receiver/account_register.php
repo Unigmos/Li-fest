@@ -9,8 +9,6 @@ if (!isset($email) || !isset($pass)) {
     header("location: /public/account_registerform.php");
 }
 $array = array("email"=>$email,"password"=>$pass);
-// TODO:emailを参照してアカウントがあるか調べるあればエラーメッセージとともにリダイレクト
-
 $hasCreated = Account::createAccount($array);
 if ($hasCreated == true) {
     header("location: /public/loginform.php");
