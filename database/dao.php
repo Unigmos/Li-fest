@@ -10,7 +10,7 @@ class Account{
      */
     public static function createAccount($info){
         $result = false;
-        $sql = 'INSERT INTO accountinfo (email, pass) VALUES(?, ?)';
+        $sql = 'INSERT INTO accountinfo (email, pass) VALUES (?, ?)';
         $array = [];
         $array[] = $info["email"];
         $array[] = $info["password"];
@@ -24,26 +24,27 @@ class Account{
     }
     /**
      * アカウント参照/ログイン時
-     * @param array $info
+     * @param String $info
      * @return bool
      */
-    public static function loginAcount($info){
+    public static function searchAcount($info){
         $result = false;
-        $sql = 'SELECT * FROM accountinfo WHERE email=? and pass=?';
+        $sql = 'SELECT * FROM accountinfo WHERE email = ?';
         $array = [];
         $array[] = $info["email"];
-        $array[] = $info["password"];
         try {
             $stmt = connect()->prepare($sql);
             $stmt->execute($array);
-            // $result = $stmt->fetch();
-            $result = true;
-            return $result;
+            $result = $stmt->fetch();
+            if ($info["password"]==$result["pass"]) return $result=1;
+            elseif ($info["password"]!=$result["pass"]) return $result=0;
         } catch (\Exception $e) {
-            return $e;
+            return $result;
         }
     }
 }
+
+
 
 class Item{
 

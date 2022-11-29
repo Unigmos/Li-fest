@@ -3,7 +3,7 @@
 <head>
     <!-- head -->
     <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html";?>
-    <link rel="stylesheet" href="/public/css/account/accountstyle.css">
+    <link rel="stylesheet" href="/public/css/accountstyle.css">
     <script src="/public/js/checkinput.js" async></script>
 </head>
 <body>
@@ -20,7 +20,7 @@
             </h3>
             <div class="login_execution_contener">
                 <!-- TODO:ログインをするためのphpのリンク -->
-                <form action="" method="post" name="login_form">
+                <form action="/public/receiver/login.php" method="post" name="login_form">
                     <input type="text" id="email" class="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
                     <input type="password" id="password" class="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                     <input type="submit" id="login_button" class="button" value="ログイン">
@@ -35,6 +35,6 @@
         </div>
     </main>
     <!-- footer -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.html";?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php";?>
 </body>
 </html>
