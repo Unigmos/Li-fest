@@ -1,4 +1,5 @@
 @import "reuse/size.scss";
+@import "reuse/color.scss";
 
 body{
     font-family: 'Kosugi Maru', sans-serif;
@@ -15,4 +16,66 @@ body{
     margin-left: auto;
     margin-top: 100px;
     margin-bottom: 30px;
+    // $media_size以上の読み込み(データ横並び)
+    @media screen and (min-width:$media_size_plus){
+        .dev_box{
+            display: flex;
+            margin-bottom: 5vh;
+            .dev_image{
+                max-width: 100px;
+                margin-right: 3%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+    // $media_size以下の読み込み(データ縦並び)
+    @media screen and (max-width:$media_size){
+        .dev_title{
+            margin: 0 5%;
+        }
+        .dev_box{
+            display: block;
+            margin: 0 5% 5vh 5%;
+            .dev_image{
+                max-width: 100px;
+                margin-right: 3%;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                }
+            }
+            
+        }
+    }
+    .dev_content{
+        .dev_buttons{
+            display: flex;
+            .dev_button{
+                display: flex;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    color: $font_color;
+                    padding: 3px;
+                    margin-right: 10px;
+                    border: 1px solid $font_color;
+                    border-radius: 5px;
+                    i{
+                        margin-right: 3px;
+                    }
+                    &:hover{
+                        color: $main_background;
+                        background-color: $font_color;
+                        transition: 0.5s ease; 
+                    }
+                }
+            }
+        }
+    }
 }
