@@ -12,7 +12,7 @@
     <main class="main_container">
         <div class="items">
             <!-- TODO:アイテムを保存する用のphpファイルのリンク -->
-            <form action="#########" method="post">
+            <form action="/public/receiver/item_register.php" method="post">
                 <div class="item_form">
                     <div class="item_name">
                     <label for="name">物品名</label>
@@ -33,7 +33,7 @@
                 <div class="item_form">
                     <div class="item_quantity">
                         <label for="quantity">個数</label>
-                        <input type="text" name="frequency" id="quantity" placeholder="例：1個" class="content">
+                        <input type="text" name="quantity" id="quantity" placeholder="例：1個" class="content">
                     </div>
                 </div>
                 <div class="item_form">
