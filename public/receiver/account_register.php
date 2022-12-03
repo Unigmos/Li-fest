@@ -7,6 +7,7 @@ $pass = filter_input(INPUT_POST, "password");
 // 基本ないけど、何か起きて値が入っていなかったらレダイレクトで戻る
 if (!isset($email) || !isset($pass)) {
     header("location: /public/account_registerform.php");
+    exit();
 }
 $array = array("email"=>$email,"password"=>$pass);
 $hasCreated = Account::createAccount($array);
@@ -16,6 +17,7 @@ if ($hasCreated == true) {
 }else{
     // TODO:エラーメッセージ送信　このemailは登録済みです
     header("location: /public/account_registerform.php");
+    exit();
 }
 
 ?>
