@@ -13,4 +13,61 @@ body {
   margin-left: auto;
   margin-top: 100px;
   margin-bottom: 30px;
+}
+@media screen and (min-width: 961px) {
+  .main_container .dev_box {
+    display: flex;
+    margin-bottom: 5vh;
+  }
+  .main_container .dev_box .dev_image {
+    max-width: 100px;
+    margin-right: 3%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_container .dev_box .dev_image img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .main_container .dev_title {
+    margin: 0 5%;
+  }
+  .main_container .dev_box {
+    display: block;
+    margin: 0 5% 5vh 5%;
+  }
+  .main_container .dev_box .dev_image {
+    max-width: 100px;
+    margin-right: 3%;
+  }
+  .main_container .dev_box .dev_image img {
+    width: 100%;
+    border-radius: 50%;
+  }
+}
+.main_container .dev_content .dev_buttons {
+  display: flex;
+}
+.main_container .dev_content .dev_buttons .dev_button {
+  display: flex;
+}
+.main_container .dev_content .dev_buttons .dev_button a {
+  display: block;
+  text-decoration: none;
+  color: #030300;
+  padding: 3px;
+  margin-right: 10px;
+  border: 1px solid #030300;
+  border-radius: 5px;
+}
+.main_container .dev_content .dev_buttons .dev_button a i {
+  margin-right: 3px;
+}
+.main_container .dev_content .dev_buttons .dev_button a:hover {
+  color: #fcfaf7;
+  background-color: #030300;
+  transition: 0.5s ease;
 }/*# sourceMappingURL=dev_info.css.map */
