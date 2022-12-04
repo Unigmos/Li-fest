@@ -18,10 +18,10 @@ for (let i = 0; i < formlength; i++) {
 function buttonavAilability(){
     //配列の要素全てをcheckinput
     if (inputs.every(checkInput)) {
-        // 1つでも空欄だと
+        // すべての欄が埋まっていると
         button.removeAttribute("disabled");
     }else{
-        // 全部何かしらの文字が入っていると
+        // 一つでも空欄があると
         button.setAttribute("disabled", "disabled");
     }
 }
