@@ -29,7 +29,7 @@
         </div>
         <div class="account_register_execution_content">
             <label>アカウントをまだお持ちではない方はこちら</label>
-            <button type="button" onclick="location.href='account_registerfrom.php'" class="button" id="account_register_button">
+            <button type="button" onclick="location.href='account_registerform.php'" class="button" id="account_register_button">
                 登録する
             </button>
         </div>
