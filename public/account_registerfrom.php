@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -20,7 +23,16 @@
             </h3>
             <div class="account_register_execution_content">
                 <form action="/public/receiver/account_register.php" method="post" name="account_register_form">
+                    <!-- TODO type="email" -->
                     <input type="text" id="email" name="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
+                    <div>
+                        <?php
+                        if (isset($_SESSION['err'])) {
+                            echo $_SESSION['err'];
+                            unset($_SESSION['err']);
+                        }
+                        ?>
+                    </div>
                     <input type="password" id="password" name="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                     <input type="submit" id="account_register_button" class="button" value="登録">
                 </form>
