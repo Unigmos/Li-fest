@@ -12,10 +12,10 @@ if (!isset($email) || !isset($pass)) {
     exit();
 }
 $array = array("email"=>$email);
-$hasCreated = Account::searchAcount($array);
+$hasSearched = Account::searchAcount($array);
 
-if (gettype($hasCreated)=="array"){
-    if ($hasCreated["pass"]==$pass){
+if (gettype($hasSearched)=="array"){
+    if ($hasSearched["pass"]==$pass){
         header("location: \public\confirmation.php");
         $_SESSION['user'] = $email;
         $pass=0;
