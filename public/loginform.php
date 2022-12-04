@@ -1,3 +1,10 @@
+<?php
+session_start();
+$email = isset($_SESSION['email']) ? $_SESSION['email'] : null;
+$session = json_encode(isset($_SESSION['err']) ? $_SESSION['err'] : null);
+unset($_SESSION['email']);
+unset($_SESSION['err']);
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -5,8 +12,12 @@
     <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html";?>
     <link rel="stylesheet" href="/public/css/accountstyle.css">
     <script src="/public/js/checkinput.js" async></script>
+    <script src="/public/js/checkerror.js" async></script>
+    <script>
+        let array = JSON.parse('<?php echo $session; ?>');
+    </script>
 </head>
-<body>
+<body onload="checkError(array)">
     <!-- header -->
     <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html";?>
     <main class="main_container">
@@ -19,10 +30,16 @@
                 生活を便利に過ごすために活用してみよう
             </h3>
             <div class="login_execution_contener">
-                <!-- TODO:ログインをするためのphpのリンク -->
                 <form action="/public/receiver/login.php" method="post" name="login_form">
-                    <input type="text" id="email" class="email" placeholder="メールアドレス" onkeyup="buttonavAilability()">
-                    <input type="password" id="password" class="password" placeholder="パスワード" onkeyup="buttonavAilability()">
+                    <!-- TODO type="email" -->
+                    <div>
+                        <input type="text" id="email" name="email" placeholder="メールアドレス" value="<?php echo $email?>" onkeyup="buttonavAilability()">
+                        <p id="email_error" class="error"></p>
+                    </div>
+                    <div>
+                        <input type="password" id="password" name="password" placeholder="パスワード" onkeyup="buttonavAilability()">
+                        <p id="password_error" class="error"></p>
+                    </div>
                     <input type="submit" id="login_button" class="button" value="ログイン">
                 </form>
             </div>
