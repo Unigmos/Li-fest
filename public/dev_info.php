@@ -18,7 +18,7 @@
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html");?>
     <main class="main_container">
         <div class="dev_title">
-            <h1>開発者情報</h1>
+            <h2>開発者情報</h2>
         </div>
         <div class="dev_box">
             <div class="dev_image">
@@ -26,7 +26,7 @@
             </div>
             <div class="dev_content">
                 <div class="dev_name">
-                    <h2>Shaneron</h2>
+                    <h3>Shaneron</h3>
                 </div>
                 <div class="dev_description">
                     <p>
@@ -57,7 +57,7 @@
             </div>
             <div class="dev_content">
                 <div class="dev_name">
-                    <h2>TreeHouse</h2>
+                    <h3>TreeHouse</h3>
                 </div>
                 <div class="dev_description">
                     <!---TODO:説明を書く--->
