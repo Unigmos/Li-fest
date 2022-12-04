@@ -29,8 +29,10 @@
                     <h2>Shaneron</h2>
                 </div>
                 <div class="dev_description">
-                    <!---TODO:説明を書く--->
-                    <p>ここに説明とかを書きますここに説明とかを書きますここに説明とかを書きます</p>
+                    <p>
+                        主にPHPとCSS、JavaScriptによるフロントエンドを担当しました。<br>
+                        コーディング以外では、サイトロゴ制作とLi-festのGitHubページの管理を行っています。
+                    </p>
                 </div>
                 <div class="dev_buttons">
                     <div class="dev_button">
@@ -51,11 +53,11 @@
 
         <div class="dev_box">
             <div class="dev_image">
-                <img src="/public/image/TreeHouse-460x460.png" alt="TreeIcon">
+                <img src="/public/image/TreeHouse-460x460.png" alt="TreeHouseIcon">
             </div>
             <div class="dev_content">
                 <div class="dev_name">
-                    <h2>Tree</h2>
+                    <h2>TreeHouse</h2>
                 </div>
                 <div class="dev_description">
                     <!---TODO:説明を書く--->
