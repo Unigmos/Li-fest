@@ -19,7 +19,7 @@ class Account{
             $result = $stmt->execute($array);
             return $result;
         } catch (\Exception $e) {
-            return $result;
+            return $e;
         }
     }
     /**
@@ -36,6 +36,7 @@ class Account{
             $stmt = connect()->prepare($sql);
             $stmt->execute($array);
             $result = $stmt->fetch();
+            // TODO:ハッシュ化に伴い変更する必要あり
             if ($info["password"]==$result["pass"]) return $result=1;
             elseif ($info["password"]!=$result["pass"]) return $result=0;
         } catch (\Exception $e) {
@@ -54,13 +55,13 @@ class Item{
      */
     public static function createInfo($info){
         $result = false;
-        $sql = 'INSERT INTO iteminfo (user, name, frequency, quantity, piece) VALUES (?, ?, ?, ?, ?)';
+        $sql = 'INSERT INTO iteminfo (user, name, frequency, quantity, price) VALUES (?, ?, ?, ?, ?)';
         $array = [];
         $array[] = $info["user"];
         $array[] = $info["name"];
         $array[] = $info["frequency"];
         $array[] = $info["quantity"];
-        $array[] = $info["piece"];
+        $array[] = $info["price"];
         try {
             $stmt = connect()->prepare($sql);
             $result = $stmt->execute($array);
@@ -72,18 +73,18 @@ class Item{
 
     /**
      * アイテム情報検索
-     * @param array $info
+     * @param String $info
      * @return bool
      */
     public static function searchInfo($info){
         $result = false;
         $sql = 'SELECT * FROM iteminfo WHERE user = ?';
         $array = [];
-        $array[] = $info["user"];
+        $array[] = $info;
         try {
             $stmt = connect()->prepare($sql);
             $result = $stmt->execute($array);
-            $result = $stmt->fetch();
+            $result = $stmt->fetchAll();
             return $result;
         } catch (\Exception $e) {
             return $result;
