@@ -2,6 +2,7 @@
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
 
 $email = filter_input(INPUT_POST, "email");
+//TODO:ハッシュ化をどこでするか、アカウント登録も同様
 $pass = filter_input(INPUT_POST, "password");
 // TODO:emailの空白削除
 // 基本ないけど、何か起きて値が入っていなかったらレダイレクトで戻る
