@@ -1,3 +1,24 @@
+<?php
+require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
+// TODO コメントアウト外す↓
+// session_start();
+// if (!isset($_SESSION['user'])) {
+//     //ログインしていなければログインページに飛ばす
+//     header("location: /public/loginform.php");
+//     exit();
+// }
+// TODO コメントアウト外す↑
+//データがあるかどうか
+$isdata = false;
+// $data = Item::searchInfo($_SESSION['user']);// TODO コメントアウト外す
+$data = Item::searchInfo('god');//TODO 消す。。テスト用
+if (!isset($data)) {
+    $isdata = false;
+}else{
+    $isdata = true;
+}
+
+?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
@@ -29,7 +50,7 @@
 
     <main class="main_container">
         <div class="action_container">
-            <a class="action_button" href="#">
+            <a class="action_button" href="/public/item_registerform.php">
                 <div class="action_content">
                     <p text="+">新規追加</p>
                 </div>
@@ -250,6 +271,11 @@
         </div>
     </main>
     <!-- footer -->
+    <div><!-- TODO 消す。。確認用↓ -->
+        <?php
+        print_r($data);
+        ?>
+    </div><!-- TODO 消す。。確認用↑ -->
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php");?>
 </body>
 </html>
