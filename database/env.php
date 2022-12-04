@@ -1,6 +1,6 @@
 <?php
 
-define("DB_HOST", "localhost");
-define("DB_NAME", "li-fest");
-define("DB_USER", "tester");
-define("DB_PASS", "lifelist");
+define("DB_HOST", "1");
+define("DB_NAME", "2");
+define("DB_USER", "3");
+define("DB_PASS", "4");
