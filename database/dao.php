@@ -19,7 +19,7 @@ class Account{
             $result = $stmt->execute($array);
             return $result;
         } catch (\Exception $e) {
-            return $e;
+            return $result;
         }
     }
     /**
@@ -36,9 +36,7 @@ class Account{
             $stmt = connect()->prepare($sql);
             $stmt->execute($array);
             $result = $stmt->fetch();
-            // TODO:ハッシュ化に伴い変更する必要あり
-            if ($info["password"]==$result["pass"]) return $result=1;
-            elseif ($info["password"]!=$result["pass"]) return $result=0;
+            return $result;
         } catch (\Exception $e) {
             return $result;
         }

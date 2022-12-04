@@ -1,36 +1,43 @@
 <?php
+session_start();
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
-
+unset($_SESSION['err']);
+unset($_SESSION['email']);
 $email = filter_input(INPUT_POST, "email");
-//TODO:ハッシュ化をどこでするか、アカウント登録も同様
 $pass = filter_input(INPUT_POST, "password");
-// TODO:emailの空白削除
 // 基本ないけど、何か起きて値が入っていなかったらレダイレクトで戻る
 if (!isset($email) || !isset($pass)) {
     header("location: /public/loginform.php");
     $pass=0;
     exit();
 }
-$array = array("email"=>$email,"password"=>$pass);
+$array = array("email"=>$email);
 $hasCreated = Account::searchAcount($array);
 
-if ($hasCreated) {
-    header("location: \public\confirmation.php");
-    session_start();
-    $_SESSION['user'] = $email;
-    $email=0;
-    $pass=0;
-    $array=[];
-    $_POST=[];
-    exit();
-}elseif ($hasCreated == 0){
-    // TODO:エラーメッセージ送信　パスワードが違う
-    header("location: /public/loginform.php");
-    exit();
+if (gettype($hasCreated)=="array"){
+    if ($hasCreated["pass"]==$pass){
+        header("location: \public\confirmation.php");
+        $_SESSION['user'] = $email;
+        $pass=0;
+        $_POST=[];
+        exit();
+    }else{
+        // TODO:エラーメッセージ送信　パスワードが違う
+        header("location: /public/loginform.php");
+        $_SESSION['err'] =['password_error'=>'パスワードが違います'];
+        $_SESSION['email'] = $email;
+        $pass=0;
+        $_POST=[];
+        exit();
+    }
 }else{
-    // TODO:エラーメッセージ送信　emailが違う
-    header("location: /public/loginform.php");
-    exit();
+        // TODO:エラーメッセージ送信　emailが違う
+        header("location: /public/loginform.php");
+        $_SESSION['err'] =['email_error'=>'このemailは登録されていません'];
+        $pass=0;
+        $_POST=[];
+        exit();
 }
+
 
 ?>
