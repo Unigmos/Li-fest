@@ -33,11 +33,11 @@ body {
   width: 80%;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 10%;
 }
 .main_container div div {
   border: none;
   box-shadow: none;
+  margin-top: 5%;
 }
 .main_container div div form {
   display: flex;
@@ -48,9 +48,18 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
-.main_container div div form input {
+.main_container div div form div {
   display: block;
-  margin-bottom: 40px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-bottom: 5%;
+}
+.main_container div div form div p {
+  margin: 0;
+  color: #ff1c1c;
+}
+.main_container div div form div input {
   font-size: 110%;
 }
 
@@ -58,8 +67,8 @@ body {
   border: none;
   border-radius: 100vh;
   color: white;
-  font-weight: 900;
-  font-size: 110%;
+  font-weight: 600;
+  font-size: 100%;
   cursor: pointer;
   box-shadow: 0 3px 5px rgba(0, 0, 0, 0.3);
 }

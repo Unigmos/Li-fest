@@ -4,6 +4,7 @@ $content_background: #eaffed;
 $font_color:  #030300;
 $button_back_color: #ffa500;
 $button_disenable: #6e6d6d;
+$error_font_color: #ff1c1c;
 
 // 要素サイズ指定
 $main_width: 800px;
@@ -44,11 +45,11 @@ body{
             width: 80%;
             margin-left: auto;
             margin-right: auto;
-            margin-bottom: 10%;
         }
         div{
             border: none;
             box-shadow: none;
+            margin-top: 5%;
             form{
                 display: flex;
                 flex-flow: column;
@@ -57,10 +58,17 @@ body{
                 max-width: fit-content;
                 margin-left: auto;
                 margin-right: auto;
-                input{
+                div{
                     display: block;
-                    margin-bottom: 40px;
-                    font-size: 110%;
+                    width: fit-content;
+                    margin-bottom: 5%;
+                    p{
+                        margin: 0;
+                        color: $error_font_color;
+                    }
+                    input{
+                        font-size: 110%;
+                    }
                 }
             }
         }
@@ -70,8 +78,8 @@ body{
     border: none;
     border-radius: 100vh;
     color: white;
-    font-weight: 900;
-    font-size: 110%;
+    font-weight: 600;
+    font-size: 100%;
     cursor: pointer;
     box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
     &:disabled{
