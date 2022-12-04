@@ -1,4 +1,5 @@
 <?php
+session_start();
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
 
 $email = filter_input(INPUT_POST, "email");
@@ -17,6 +18,7 @@ if ($hasCreated == true) {
 }else{
     // TODO:エラーメッセージ送信　このemailは登録済みです
     header("location: /public/account_registerform.php");
+    $_SESSION['err'] = 'このemailは登録済みです';
     exit();
 }
 
