@@ -4,6 +4,12 @@ $email = isset($_SESSION['email']) ? $_SESSION['email'] : null;
 $session = json_encode(isset($_SESSION['err']) ? $_SESSION['err'] : null);
 unset($_SESSION['email']);
 unset($_SESSION['err']);
+
+// ログインしていたらリダイレクト
+if ($_COOKIE['user']){
+    header("location: \public\confirmation.php");
+        exit();
+}
 ?>
 <!DOCTYPE html>
 <html lang="ja">
