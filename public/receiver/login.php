@@ -17,7 +17,7 @@ $hasSearched = Account::searchAcount($array);
 if (gettype($hasSearched)=="array"){
     if ($hasSearched["pass"]==$pass){
         header("location: \public\confirmation.php");
-        $_SESSION['user'] = $email;
+        setcookie('user',$email);
         $pass=0;
         $_POST=[];
         exit();
