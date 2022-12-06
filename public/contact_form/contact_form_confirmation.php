@@ -8,6 +8,7 @@
 
     $email = $_POST["email"];
     $message = $_POST["message"];
+    $csrf_token = $_POST["csrf_token"]
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -26,11 +27,16 @@
     <main class="main_container">
         <div class="contact_title">
             <h2>お問い合わせ確認</h2>
-            <form action="send.php" method="post">
+            <form action="contact_form_sent.php" method="post">
                 <h3>メールアドレス</h3>
                 <?php echo htmlspecialchars($email, ENT_QUOTES,'UTF-8');?>
                 <h3>お問い合わせ内容</h3>
                 <p><?php echo htmlspecialchars($message, ENT_QUOTES,'UTF-8');?></p>
+                <input type="button" onclick="history.back()" value="戻る">
+                <input type="submit" value="送信">
+                <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?>"/>
+                <input type="hidden" name="email" value="<?php echo $email;?>">
+                <input type="hidden" name="message" value="<?php echo $message;?>">
             </form>
         </div>
     </main>
