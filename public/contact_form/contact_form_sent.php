@@ -48,7 +48,7 @@
         <div class="contact_title">
             <h2>お問い合わせありがとうございます。</h2>
             <p>今後とも当サイトをよろしくお願いいたします。</p>
-            <a href="index.php">お問い合わせトップへ</a>
+            <a href="contact_form.php">お問い合わせトップへ</a>
         </div>
     </main>
     <!-- footer -->
