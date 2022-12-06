@@ -72,10 +72,9 @@ class Item{
     /**
      * アイテム情報検索
      * @param String $info
-     * @return bool
+     * @return array
      */
     public static function searchInfo($info){
-        $result = false;
         $sql = 'SELECT * FROM iteminfo WHERE user = ?';
         $array = [];
         $array[] = $info;
@@ -85,7 +84,7 @@ class Item{
             $result = $stmt->fetchAll();
             return $result;
         } catch (\Exception $e) {
-            return $result;
+            return $result = "";
         }
     }
 }

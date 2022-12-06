@@ -12,10 +12,21 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
 $isdata = false;
 // $data = Item::searchInfo($_SESSION['user']);// TODO コメントアウト外す
 $data = Item::searchInfo('god');//TODO 消す。。テスト用
+
 if (!isset($data)) {
     $isdata = false;
 }else{
     $isdata = true;
+}
+// itemsの０番目に"日ごと"の連想配列、、、、
+if ($isdata) {
+    $frequencies = ['日ごと', '週ごと', '月ごと', '年ごと'];
+    for ($i=0; $i < count($frequencies); $i++) { 
+        $frequency = $frequencies[$i];
+        $items[$i] = array_filter($data,function($item, $frequency){
+            return $item['frequency'] == $frequency;
+        });
+    }
 }
 
 ?>
