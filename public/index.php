@@ -16,7 +16,6 @@
         <div class="title_description">
             <h2>Li-festへようこそ！！</h2>
             <p>Li-festは生活必需品やサブスクリプションの購入頻度に応じて金額と製品をリストアップするアプリケーションです！</p>
-            <!-- TODO:要変更 （aタグのレイアウトとか表記の仕方） -->
             <div class="register_box">
                 <a href="./account_registerform.php">初めてご利用の方はこちら</a>
             </div>
@@ -37,7 +36,7 @@
                         <p>サイト上部ボタンからログイン、または新規登録を行います。</p>
                     </div>
                     <div class="use_image">
-                        <img src="image/Li-fest_no_image.png" alt="使い方_1">
+                        <img src="image/choose_button.png" alt="使い方_1">
                     </div>
                 </div>
 
