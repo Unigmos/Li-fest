@@ -1,7 +1,7 @@
 <?php
 session_start();
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : null;
-$session = isset($_SESSION['err']) ? $_SESSION['err'] : null;
+$err = isset($_SESSION['err']) ? $_SESSION['err'] : null;
 unset($_SESSION['email']);
 unset($_SESSION['err']);
 // ログインしていたらリダイレクト
@@ -41,8 +41,8 @@ $_SESSION['csrf_token'] = $csrf_token;
                         <input type="email" id="email" name="email" placeholder="メールアドレス" value="<?php echo $email?>" onkeyup="buttonavAilability()">
                         <?php
                         $id = "email_error";
-                        if ($session!=null) {
-                            echo '<p id='.$id. 'class="error">'.$session[$id].'</p>';
+                        if ($err!=null) {
+                            echo '<p id='.$id. 'class="error">'.$err[$id].'</p>';
                         }else{
                             echo '<p id='.$id. 'class="error" hidden>エラーメッセージなし</p>';
                         }
@@ -52,8 +52,8 @@ $_SESSION['csrf_token'] = $csrf_token;
                         <input type="password" id="password" name="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                         <?php
                         $id = "password_error";
-                        if ($session!=null) {
-                            echo '<p id='.$id. 'class="error">'.$session[$id].'</p>';
+                        if ($err!=null) {
+                            echo '<p id='.$id. 'class="error">'.$err[$id].'</p>';
                         }else{
                             echo '<p id='.$id. 'class="error" hidden>エラーメッセージなし</p>';
                         }
