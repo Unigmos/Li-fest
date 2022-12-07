@@ -11,23 +11,16 @@ require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
 //データがあるかどうか
 $isdata = false;
 // $data = Item::searchInfo($_SESSION['user']);// TODO コメントアウト外す
-$data = Item::searchInfo('god');//TODO 消す。。テスト用
-
+// $data = Item::searchInfo('god');//TODO 消す。。テスト用
+$data = Array(Array("id"=>3, "user"=> "god", "name"=>"はぶらし", "frequency"=>"日ごと", "quantity"=>2, "price"=> 200),
+Array("id"=>4, "user"=> "god", "name"=>"中島くん", "frequency"=>"月ごと", "quantity"=>1, "price"=> 3000),
+Array("id"=>6, "user"=> "god", "name"=>"はぶらし", "frequency"=>"日ごと", "quantity"=>3, "price"=> 300));
 if (!isset($data)) {
     $isdata = false;
 }else{
     $isdata = true;
 }
-// itemsの０番目に"日ごと"の連想配列、、、、
-if ($isdata) {
-    $frequencies = ['日ごと', '週ごと', '月ごと', '年ごと'];
-    for ($i=0; $i < count($frequencies); $i++) { 
-        $frequency = $frequencies[$i];
-        $items[$i] = array_filter($data,function($item, $frequency){
-            return $item['frequency'] == $frequency;
-        });
-    }
-}
+
 
 ?>
 <!DOCTYPE html>
@@ -73,220 +66,51 @@ if ($isdata) {
             </a>
         </div>
         <div class="menu">
+            <?php
+            if ($isdata) {
+                $frequencies = array("day"=>'日ごと', "week"=>'週ごと', "month"=>'月ごと', "year"=>'年ごと');
+                $frequencykeies = array_keys($frequencies);
+                for ($i=0; $i < count($frequencies); $i++) { 
+                    $key = $frequencykeies[$i];
+                    $frequency = $frequencies[$key];
+                    $items[$i] = array_values(array_filter($data,function($item) use($frequency){
+                        return $item['frequency'] == $frequency;
+                    }));
+                    
+                    echo '
             <div class="accordion">
-                <label for="day">日ごと</label>
-                <input type="checkbox" id="day" class="day" onclick="Check(this.id)"/>
-                <p id="day_total">日ごと合計:円</p>
+                <label for="'.$key.'">'.$frequency.'</label>
+                <input type="checkbox" id="'.$key.'" class="'.$key.'" onclick="Check(this.id)"/>
+                <p id="'.$key.'_total">'.$frequency.'合計:円</p>
             </div>
-            <div id="day_div">
+            <div id="'.$key.'_div">';
+                    for ($j=0; $j < count($items[$i]); $j++) { 
+                        echo '
                 <div class="box">
                     <div class="box_describe">
                         <div class="box_describe_data bg_color_one">
-                            <p>物品名</p>
+                            <p>'.$items[$i][$j]["name"].'</p>
                         </div>
                         <div class="box_describe_data bg_color_two">
-                            <p>個数(個)</p>
+                            <p>'.$items[$i][$j]["quantity"].'(個)</p>
                         </div>
                         <div class="box_describe_data bg_color_three">
-                            <p>1つ当たりの金額(円)</p>
+                            <p>'.$items[$i][$j]["price"].'(円)</p>
                         </div>
                     </div>
                     <div class="box_button">
                         <p>設定</p>
                     </div>
-                </div>
-
-                <div class="box">
-                    <div class="box_content">
-                        <div class="box_data bg_color_one">
-                            <p>day_test_1</p>
-                        </div>
-                        <div class="box_data bg_color_two">
-                            <p class="day_quantity">2</p>
-                        </div>
-                        <div class="box_data bg_color_three">
-                            <p class="day_cost">100</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <!--- data-indexを要素が増えるたびに増やしていく --->
-                        <button type="button" class="three_bt" id="three_button" name="days" value="1" onclick="Context(this)">
-                            <span class="material-symbols-outlined">
-                                more_vert
-                            </span>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="box_content">
-                        <div class="box_data bg_color_one">
-                            <p>day_test_2</p>
-                        </div>
-                        <div class="box_data bg_color_two">
-                            <p class="day_quantity">3</p>
-                        </div>
-                        <div class="box_data bg_color_three">
-                            <p class="day_cost">50</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <!--- data-indexを要素が増えるたびに増やしていく --->
-                        <button type="button" class="three_bt" id="three_button" name="days" value="1" onclick="Context(this)">
-                            <span class="material-symbols-outlined">
-                                more_vert
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <label for="week">週ごと</label>
-                <input type="checkbox" id="week" class="week" onclick="Check(this.id)"/>
-                <p id="week_total">週ごと合計:円</p>
-            </div>
-            <div id="week_div">
-                <div class="box">
-                    <div class="box_describe">
-                        <div class="box_describe_data bg_color_one">
-                            <p>物品名</p>
-                        </div>
-                        <div class="box_describe_data bg_color_two">
-                            <p>個数</p>
-                        </div>
-                        <div class="box_describe_data bg_color_three">
-                            <p>1つ当たりの金額</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <p>設定</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="box_content">
-                        <div class="box_data bg_color_one">
-                            <p>week_test_1</p>
-                        </div>
-                        <div class="box_data bg_color_two">
-                            <p class="week_quantity">1</p>
-                        </div>
-                        <div class="box_data bg_color_three">
-                            <p class="week_cost">500</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <!--- data-indexを要素が増えるたびに増やしていく --->
-                        <button type="button" class="three_bt" id="three_button" name="weeks" data-index="1" onclick="Context()">
-                            <span class="material-symbols-outlined">
-                                more_vert
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <label for="month">月ごと</label>
-                <input type="checkbox" id="month" class="month" onclick="Check(this.id)"/>
-                <p id="month_total">月ごと合計:円</p>
-            </div>
-            <div id="month_div">
-                <div class="box">
-                    <div class="box_describe">
-                        <div class="box_describe_data bg_color_one">
-                            <p>物品名</p>
-                        </div>
-                        <div class="box_describe_data bg_color_two">
-                            <p>個数</p>
-                        </div>
-                        <div class="box_describe_data bg_color_three">
-                            <p>1つ当たりの金額</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <p>設定</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="box_content">
-                        <div class="box_data bg_color_one">
-                            <p>month_test_1</p>
-                        </div>
-                        <div class="box_data bg_color_two">
-                            <p class="month_quantity">1</p>
-                        </div>
-                        <div class="box_data bg_color_three">
-                            <p class="month_cost">2000</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <!--- data-indexを要素が増えるたびに増やしていく --->
-                        <button type="button" class="three_bt" id="three_button" name="months" data-index="1">
-                            <span class="material-symbols-outlined">
-                                more_vert
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion">
-                <label for="year">年ごと</label>
-                <input type="checkbox" id="year" class="year" onclick="Check(this.id)"/>
-                <p id="year_total">年ごと合計:円</p>
-            </div>
-            <div id="year_div">
-                <div class="box">
-                    <div class="box_describe">
-                        <div class="box_describe_data bg_color_one">
-                            <p>物品名</p>
-                        </div>
-                        <div class="box_describe_data bg_color_two">
-                            <p>個数</p>
-                        </div>
-                        <div class="box_describe_data bg_color_three">
-                            <p>1つ当たりの金額</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <p>設定</p>
-                    </div>
-                </div>
-
-                <div class="box">
-                    <div class="box_content">
-                        <div class="box_data bg_color_one">
-                            <p>year_test_1</p>
-                        </div>
-                        <div class="box_data bg_color_two">
-                            <p class="year_quantity">1</p>
-                        </div>
-                        <div class="box_data bg_color_three">
-                            <p class="year_cost">10000</p>
-                        </div>
-                    </div>
-                    <div class="box_button">
-                        <!--- data-indexを要素が増えるたびに増やしていく --->
-                        <button type="button" class="three_bt" id="three_button" name="years" data-index="1">
-                            <span class="material-symbols-outlined">
-                                more_vert
-                            </span>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
+                </div>';
+                    }
+                    echo '
+            </div>';
+                }
+            }
+            ?>
         </div>
     </main>
     <!-- footer -->
-    <div><!-- TODO 消す。。確認用↓ -->
-        <?php
-        print_r($data);
-        ?>
-    </div><!-- TODO 消す。。確認用↑ -->
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php");?>
 </body>
 </html>
