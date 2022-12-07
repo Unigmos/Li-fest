@@ -4,10 +4,6 @@
     <!-- head -->
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
     <link rel="stylesheet" href="css/privacy_policy.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
-    <script src="/public/js/under_fix.js" async></script>
 </head>
 <body>
     <!-- header -->

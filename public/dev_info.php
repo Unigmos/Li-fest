@@ -4,9 +4,6 @@
     <!-- head -->
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
     <link rel="stylesheet" href="css/dev_info.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
     <script src="js/under_fix.js" async></script>
