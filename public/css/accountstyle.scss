@@ -49,6 +49,8 @@ body{
                 margin-right: auto;
                 div{
                     display: block;
+                    width: -webkit-fit-content;
+                    width: -moz-fit-content;
                     width: fit-content;
                     margin-bottom: 5%;
                     p{
