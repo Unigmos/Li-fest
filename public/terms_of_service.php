@@ -4,8 +4,6 @@
     <!-- head -->
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
     <link rel="stylesheet" href="css/terms_of_service.css">
-    <link rel="stylesheet" href="css/reuse/header.css">
-    <link rel="stylesheet" href="css/reuse/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">

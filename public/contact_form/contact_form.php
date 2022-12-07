@@ -4,6 +4,7 @@
     $csrf_token = bin2hex($token_byte);
     // セッションに保存
     $_SESSION['csrf_token'] = $csrf_token;
+    unset($_SESSION['csrf_token']);
 ?>
 <!DOCTYPE html>
 <html lang="ja">

@@ -1,8 +1,13 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
 session_start();
-// $user = $_SESSION['user']; TODO:元に戻す　テスト用
-$user = "god";
+if($_SERVER["REQUEST_METHOD"] != "POST" || !isset($_POST["csrf_token"]) || $_POST["csrf_token"] != $_SESSION["csrf_token"]){
+    header("Location: contact_form.php");
+    exit();
+}
+unset($_SESSION['csrf_token']);
+// $user = $_SESSION['user']; TODO:元に戻す
+$user = "god";//テスト用
 $name = filter_input(INPUT_POST, "name");
 $frequency = filter_input(INPUT_POST, "frequency");
 $quantity = filter_input(INPUT_POST, "quantity");
@@ -21,8 +26,7 @@ if ($hasCreated == true) {
     exit();
 }else{
     // TODO:エラーメッセージ送信
-    //header("location: /public/item_registerform.php");
-    $_SESSION['err'] = '失敗';
+    header("location: /public/item_registerform.php");
     exit();
 }
 

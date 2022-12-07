@@ -1,6 +1,11 @@
 <?php
-session_start();
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
+session_start();
+if($_SERVER["REQUEST_METHOD"] != "POST" || !isset($_POST["csrf_token"]) || $_POST["csrf_token"] != $_SESSION["csrf_token"]){
+    header("Location: contact_form.php");
+    exit();
+}
+unset($_SESSION['csrf_token']);
 unset($_SESSION['err']);
 unset($_SESSION['email']);
 $email = filter_input(INPUT_POST, "email");

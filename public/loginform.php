@@ -1,15 +1,19 @@
 <?php
 session_start();
 $email = isset($_SESSION['email']) ? $_SESSION['email'] : null;
-$session = isset($_SESSION['err']) ? $_SESSION['err'] : null;
+$err = isset($_SESSION['err']) ? $_SESSION['err'] : null;
 unset($_SESSION['email']);
 unset($_SESSION['err']);
 
 // ログインしていたらリダイレクト
-if ($_COOKIE['user']){
+if (isset($_COOKIE['user'])){
     header("location: \public\confirmation.php");
-        exit();
+    exit();
 }
+$token_byte = openssl_random_pseudo_bytes(16);
+$csrf_token = bin2hex($token_byte);
+// セッションに保存
+$_SESSION['csrf_token'] = $csrf_token;
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -34,13 +38,13 @@ if ($_COOKIE['user']){
             </h3>
             <div class="login_execution_contener">
                 <form action="/public/receiver/login.php" method="post" name="login_form">
-                    <!-- TODO type="email" -->
+                    <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?>"/>
                     <div>
-                        <input type="text" id="email" name="email" placeholder="メールアドレス" value="<?php echo $email?>" onkeyup="buttonavAilability()">
+                        <input type="email" id="email" name="email" placeholder="メールアドレス" value="<?php echo $email?>" onkeyup="buttonavAilability()">
                         <?php
                         $id = "email_error";
-                        if ($session!=null) {
-                            echo '<p id='.$id. 'class="error">'.$session[$id].'</p>';
+                        if ($err!=null) {
+                            echo '<p id='.$id. 'class="error">'.$err[$id].'</p>';
                         }else{
                             echo '<p id='.$id. 'class="error" hidden>エラーメッセージなし</p>';
                         }
@@ -50,8 +54,8 @@ if ($_COOKIE['user']){
                         <input type="password" id="password" name="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                         <?php
                         $id = "password_error";
-                        if ($session!=null) {
-                            echo '<p id='.$id. 'class="error">'.$session[$id].'</p>';
+                        if ($err!=null) {
+                            echo '<p id='.$id. 'class="error">'.$err[$id].'</p>';
                         }else{
                             echo '<p id='.$id. 'class="error" hidden>エラーメッセージなし</p>';
                         }

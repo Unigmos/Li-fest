@@ -1,17 +1,15 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
-// TODO コメントアウト外す↓
-// session_start();
-// if (!isset($_COOKIE['user'])) {
-//     //ログインしていなければログインページに飛ばす
-//     header("location: /public/loginform.php");
-//     exit();
-// }
-// TODO コメントアウト外す↑
+session_start();
+if (!isset($_COOKIE['user'])) {
+    //ログインしていなければログインページに飛ばす
+    header("location: /public/loginform.php");
+    exit();
+}
 //データがあるかどうか
 $isdata = false;
 // $data = Item::searchInfo($_SESSION['user']);// TODO コメントアウト外す
-// $data = Item::searchInfo('god');//TODO 消す。。テスト用
+//テストデータ
 $data = Array(Array("id"=>3, "user"=> "god", "name"=>"はぶらし", "frequency"=>"日ごと", "quantity"=>2, "price"=> 200),
 Array("id"=>4, "user"=> "god", "name"=>"中島くん", "frequency"=>"月ごと", "quantity"=>1, "price"=> 3000),
 Array("id"=>6, "user"=> "god", "name"=>"はぶらし", "frequency"=>"日ごと", "quantity"=>3, "price"=> 300));
@@ -83,23 +81,43 @@ if (!isset($data)) {
                 <input type="checkbox" id="'.$key.'" class="'.$key.'" onclick="Check(this.id)"/>
                 <p id="'.$key.'_total">'.$frequency.'合計:円</p>
             </div>
-            <div id="'.$key.'_div">';
-                    for ($j=0; $j < count($items[$i]); $j++) { 
-                        echo '
+            <div id="'.$key.'_div">
                 <div class="box">
                     <div class="box_describe">
                         <div class="box_describe_data bg_color_one">
-                            <p>'.$items[$i][$j]["name"].'</p>
+                            <p>物品名</p>
                         </div>
                         <div class="box_describe_data bg_color_two">
-                            <p class="'.$key.'_quantity">'.$items[$i][$j]["quantity"].'(個)</p>
+                            <p>個数(個)</p>
                         </div>
                         <div class="box_describe_data bg_color_three">
-                            <p class="'.$key.'_cost">'.$items[$i][$j]["price"].'(円)</p>
+                            <p>1つ当たりの金額(円)</p>
                         </div>
                     </div>
                     <div class="box_button">
                         <p>設定</p>
+                    </div>
+                </div>';
+                    for ($j=0; $j < count($items[$i]); $j++) { 
+                        echo '
+                <div class="box">
+                    <div class="box_content">
+                        <div class="box_data bg_color_one">
+                            <p>'.$items[$i][$j]["name"].'</p>
+                        </div>
+                        <div class="box_data bg_color_two">
+                            <p class="'.$key.'_quantity">'.$items[$i][$j]["quantity"].'(個)</p>
+                        </div>
+                        <div class="box_data bg_color_three">
+                            <p class="'.$key.'_cost">'.$items[$i][$j]["price"].'(円)</p>
+                        </div>
+                    </div>
+                    <div class="box_button">
+                        <button type="button" class="three_bt" id="three_button" name="days" value="1" onclick="Context(this)">
+                            <span class="material-symbols-outlined">
+                                more_vert
+                            </span>
+                        </button>
                     </div>
                 </div>';
                     }

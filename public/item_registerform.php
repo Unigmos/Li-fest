@@ -1,8 +1,14 @@
 <?php
 session_start();
-if (isset($_SESSION['err'])){
-    echo $_SESSION['err'];
+// ログインしていなかったらリダイレクト
+if (!isset($_COOKIE['user'])){
+    header("location: \public\loginform.php");
+    exit();
 }
+$token_byte = openssl_random_pseudo_bytes(16);
+$csrf_token = bin2hex($token_byte);
+// セッションに保存
+$_SESSION['csrf_token'] = $csrf_token;
 ?>
 <!DOCTYPE html>
 <html lang="ja">
@@ -17,8 +23,8 @@ if (isset($_SESSION['err'])){
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html"); ?>
     <main class="main_container">
         <div class="items">
-            <!-- TODO:アイテムを保存する用のphpファイルのリンク -->
             <form action="/public/receiver/item_register.php" method="post">
+                <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?>"/>
                 <div class="item_form">
                     <div class="item_name">
                     <label for="name">物品名</label>

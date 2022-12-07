@@ -4,8 +4,6 @@
     <!-- head -->
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
     <link rel="stylesheet" href="css/index.css">
-    <link rel="stylesheet" href="css/reuse/header.css">
-    <link rel="stylesheet" href="css/reuse/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
@@ -20,8 +18,8 @@
             <!-- TODO:文面考える(今はGitHubのAboutと同じこと書いてある) -->
             <p>Li-festは生活必需品やサブスクリプションの購入頻度に応じて金額と製品をリストアップするアプリケーションです！</p>
             <!-- TODO:要変更 （aタグのレイアウトとか表記の仕方） -->
-            <label>初めてご利用の方は<a href="./account/account_registerform.php">こちら</a></label>
-            <label>ログインは<a href="./account/loginform.php">こちら</a></label>
+            <label>初めてご利用の方は<a href="./account_registerform.php">こちら</a></label>
+            <label>ログインは<a href="./loginform.php">こちら</a></label>
         </div>
         <div class="top_image">
             <img src="image/Li-fest.png" alt="サムネイル">
