@@ -39,11 +39,41 @@
 
                 <div class="use_content_box replace_data">
                     <div class="use_image">
-                        <img src="image/Li-fest_no_image.png" alt="使い方_2">
+                        <img src="image/data_input.png" alt="使い方_2">
                     </div>
                     <div class="use_sentence">
-                        <!--TODO:説明を考える-->
-                        <p>使い方は云々</p>
+                        <p>メールアドレス、パスワードを入力し登録(ログイン)を行います。</p>
+                    </div>
+                </div>
+
+                <div class="use_content_box">
+                    <div class="use_sentence">
+                        <p>初期の状態では何も登録されていないので、「新規追加」ボタンからデータを追加します。</p>
+                    </div>
+                    <div class="use_image">
+                        <img src="image/Li-fest_no_image.png" alt="使い方_3">
+                    </div>
+                </div>
+
+                <div class="use_content_box replace_data">
+                    <div class="use_image">
+                        <img src="image/Li-fest_no_image.png" alt="使い方_4">
+                    </div>
+                    <div class="use_sentence">
+                        <!--TODO:画像の差し替え-->
+                        <p>各項目の情報を入力し、画面下部にある「登録」ボタンを押します。</p>
+                    </div>
+                </div>
+
+                <div class="use_content_box">
+                    <div class="use_sentence">
+                        <p>
+                            データが登録されました！<br>
+                            基本的な操作は以上となるので後はご自由にお使いください。
+                        </p>
+                    </div>
+                    <div class="use_image">
+                        <img src="image/Li-fest_no_image.png" alt="使い方_5">
                     </div>
                 </div>
             </div>
