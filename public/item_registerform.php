@@ -1,7 +1,7 @@
 <?php
 session_start();
 // ログインしていなかったらリダイレクト
-if (!isset($_COOKIE['user'])){
+if (!isset($_SESSION['user'])){
     header("location: \public\loginform.php");
     exit();
 }

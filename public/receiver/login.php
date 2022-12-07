@@ -2,7 +2,7 @@
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
 session_start();
 if($_SERVER["REQUEST_METHOD"] != "POST" || !isset($_POST["csrf_token"]) || $_POST["csrf_token"] != $_SESSION["csrf_token"]){
-    header("Location: contact_form.php");
+    header("Location: \public\confirmation.php");
     exit();
 }
 unset($_SESSION['csrf_token']);
@@ -18,11 +18,11 @@ if (!isset($email) || !isset($pass)) {
 }
 $array = array("email"=>$email);
 $hasSearched = Account::searchAcount($array);
-
+var_dump(gettype($hasSearched)=="array");
 if (gettype($hasSearched)=="array"){
-    if ($hasSearched["pass"]==$pass){
+    if (password_verify($pass,$hasSearched['pass'])){
+        $_SESSION['user'] = $email;
         header("location: \public\confirmation.php");
-        setcookie('user',$email);
         $pass=0;
         $_POST=[];
         exit();

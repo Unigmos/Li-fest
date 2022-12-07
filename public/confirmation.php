@@ -1,7 +1,7 @@
 <?php
 require_once $_SERVER["DOCUMENT_ROOT"]."/database/dao.php";
 session_start();
-if (!isset($_COOKIE['user'])) {
+if (!isset($_SESSION['user'])) {
     //ログインしていなければログインページに飛ばす
     header("location: /public/loginform.php");
     exit();

@@ -41,7 +41,7 @@ $_SESSION['csrf_token'] = $csrf_token;
                         <input type="email" id="email" name="email" placeholder="メールアドレス" value="<?php echo $email?>" onkeyup="buttonavAilability()">
                         <?php
                         $id = "email_error";
-                        if ($err[$id]!=null) {
+                        if (isset($err[$id])) {
                             echo '<p id='.$id. 'class="error">'.$err[$id].'</p>';
                         }else{
                             echo '<p id='.$id. 'class="error" hidden>エラーメッセージなし</p>';
@@ -52,7 +52,7 @@ $_SESSION['csrf_token'] = $csrf_token;
                         <input type="password" id="password" name="password" placeholder="パスワード" onkeyup="buttonavAilability()">
                         <?php
                         $id = "password_error";
-                        if ($err[$id]!=null) {
+                        if (isset($err[$id])) {
                             echo '<p id='.$id. 'class="error">'.$err[$id].'</p>';
                         }else{
                             echo '<p id='.$id. 'class="error" hidden>エラーメッセージなし</p>';
