@@ -92,10 +92,10 @@ if (!isset($data)) {
                             <p>'.$items[$i][$j]["name"].'</p>
                         </div>
                         <div class="box_describe_data bg_color_two">
-                            <p>'.$items[$i][$j]["quantity"].'(個)</p>
+                            <p class="'.$key.'_quantity">'.$items[$i][$j]["quantity"].'(個)</p>
                         </div>
                         <div class="box_describe_data bg_color_three">
-                            <p>'.$items[$i][$j]["price"].'(円)</p>
+                            <p class="'.$key.'_cost">'.$items[$i][$j]["price"].'(円)</p>
                         </div>
                     </div>
                     <div class="box_button">
