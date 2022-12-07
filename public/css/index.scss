@@ -107,6 +107,8 @@ body{
                         img{
                             max-width: 100%;
                             object-fit: contain;
+                            border: 3px solid #FFF;
+                            box-shadow: 0 0 5px #999;
                         }
                     }
                     &:first-child{
@@ -127,6 +129,8 @@ body{
                         img{
                             max-width: 100%;
                             object-fit: contain;
+                            border: 3px solid #FFF;
+                            box-shadow: 0 0 5px #999;
                         }
                     }
                     &:first-child{
