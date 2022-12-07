@@ -5,7 +5,7 @@ for (let i = 0; i < formlength; i++) {
     let elements = document.forms[0].elements[i];
     // タグ名がinputでかつtypeがtxstかpassword
     if(elements.tagName=="INPUT"){
-        if(elements.type=="text" || elements.type=="password"){
+        if(elements.type=="text" || elements.type=="password" || elements.type=="number"){
             inputs[i] = elements;
         }else if(elements.type=="submit"){
             button = elements;
