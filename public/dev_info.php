@@ -4,8 +4,6 @@
     <!-- head -->
     <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
     <link rel="stylesheet" href="css/dev_info.css">
-    <link rel="stylesheet" href="css/reuse/header.css">
-    <link rel="stylesheet" href="css/reuse/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
@@ -50,7 +48,6 @@
             </div>
         </div>
 
-
         <div class="dev_box">
             <div class="dev_image">
                 <img src="/public/image/TreeHouse-460x460.png" alt="TreeHouseIcon">
@@ -60,8 +57,12 @@
                     <h3>TreeHouse</h3>
                 </div>
                 <div class="dev_description">
-                    <!---TODO:説明を書く--->
-                    <p>ここに説明とかを書きますここに説明とかを書きますここに説明とかを書きます</p>
+                    <p>
+                        企画案の提案者です。
+                        主にPHPとCSS、JavaScriptによるバックエンドを担当しました。<br>
+                        また、SQLによるデータベースの管理を行っています。
+                        要望ありましたら変更していきたいと思います。
+                    </p>
                 </div>
                 <div class="dev_buttons">
                     <div class="dev_button">
