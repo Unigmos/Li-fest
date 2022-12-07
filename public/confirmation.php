@@ -8,11 +8,7 @@ if (!isset($_COOKIE['user'])) {
 }
 //データがあるかどうか
 $isdata = false;
-// $data = Item::searchInfo($_SESSION['user']);// TODO コメントアウト外す
-//テストデータ
-$data = Array(Array("id"=>3, "user"=> "god", "name"=>"はぶらし", "frequency"=>"日ごと", "quantity"=>2, "price"=> 200),
-Array("id"=>4, "user"=> "god", "name"=>"中島くん", "frequency"=>"月ごと", "quantity"=>1, "price"=> 3000),
-Array("id"=>6, "user"=> "god", "name"=>"はぶらし", "frequency"=>"日ごと", "quantity"=>3, "price"=> 300));
+$data = Item::searchInfo($_SESSION['user']);
 if (!isset($data)) {
     $isdata = false;
 }else{

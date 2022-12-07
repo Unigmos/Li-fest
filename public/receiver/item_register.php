@@ -6,8 +6,7 @@ if($_SERVER["REQUEST_METHOD"] != "POST" || !isset($_POST["csrf_token"]) || $_POS
     exit();
 }
 unset($_SESSION['csrf_token']);
-// $user = $_SESSION['user']; TODO:元に戻す
-$user = "god";//テスト用
+$user = $_SESSION['user'];
 $name = filter_input(INPUT_POST, "name");
 $frequency = filter_input(INPUT_POST, "frequency");
 $quantity = filter_input(INPUT_POST, "quantity");
