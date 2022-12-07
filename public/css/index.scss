@@ -1,12 +1,5 @@
-// 色指定
-$main_background: #fcfaf7;
-$font_color:  #030300;
-
-// 要素サイズ指定
-$main_width: 800px;
-$media_size: 960px;
-$media_size_plus: $media_size + 1px;
-$box_margin: 20px;
+@import "reuse/size.scss";
+@import "reuse/color.scss";
 
 body{
     font-family: 'Kosugi Maru', sans-serif;
@@ -23,12 +16,45 @@ body{
     margin-left: auto;
     margin-top: 100px;
     margin-bottom: 30px;
+    padding: 0 3%;
     .title_description{
         h2{
             text-align: center;
+            font-size: 32px;
         }
         p{
             text-align: center;
+        }
+        .register_box{
+            margin: 0 auto 10px auto;
+            max-width: 250px;
+            border-radius: 10px;
+            border: 1px solid $logo_green;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                padding: 8px 15px;
+                color: $font_color;
+                text-decoration: none;
+                display: block;
+            }
+            &:hover{
+                background-color: $logo_green;
+                transition: 0.5s ease;
+                a{
+                    color: $main_background;
+                    transition: 0.5s ease;
+                }
+            }
+        }
+        .login_box{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            a{
+                font-size: 14px;
+            }
         }
     }
     .top_image{

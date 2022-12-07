@@ -15,11 +15,14 @@
     <main class="main_container">
         <div class="title_description">
             <h2>Li-festへようこそ！！</h2>
-            <!-- TODO:文面考える(今はGitHubのAboutと同じこと書いてある) -->
             <p>Li-festは生活必需品やサブスクリプションの購入頻度に応じて金額と製品をリストアップするアプリケーションです！</p>
             <!-- TODO:要変更 （aタグのレイアウトとか表記の仕方） -->
-            <label>初めてご利用の方は<a href="./account_registerform.php">こちら</a></label>
-            <label>ログインは<a href="./loginform.php">こちら</a></label>
+            <div class="register_box">
+                <a href="./account_registerform.php">初めてご利用の方はこちら</a>
+            </div>
+            <div class="login_box">
+                <a href="./loginform.php">ログインはこちら</a>
+            </div>
         </div>
         <div class="top_image">
             <img src="image/Li-fest.png" alt="サムネイル">
@@ -29,7 +32,6 @@
                 <h2>使い方</h2>
             </div>
             <div class="how_to_use_content">
-                <!--TODO:縦並びになった時に文章と画像の順番がバラバラにならないようJS作る-->
                 <div class="use_content_box">
                     <div class="use_sentence">
                         <p>サイト上部ボタンからログイン、または新規登録を行います。</p>
