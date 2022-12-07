@@ -5,6 +5,7 @@
 		header("Location: contact_form.php");
 		exit();
 	}
+    // TODO:メール送信の確認
 
     /*
     mb_language("Japanese");
