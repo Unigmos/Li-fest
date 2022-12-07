@@ -5,7 +5,7 @@
 		header("Location: contact_form.php");
 		exit();
 	}
-
+    unset($_SESSION["csrf_token"]);
     $email = $_POST["email"];
     $message = $_POST["message"];
     $csrf_token = $_POST["csrf_token"]
