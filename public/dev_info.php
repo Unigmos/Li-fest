@@ -55,7 +55,7 @@
                 </div>
                 <div class="dev_description">
                     <p>
-                        企画案の提案者です。
+                        企画の提案者です。
                         主にPHPとCSS、JavaScriptによるバックエンドを担当しました。<br>
                         また、SQLによるデータベースの管理を行っています。
                         要望ありましたら変更していきたいと思います。
@@ -65,6 +65,11 @@
                     <div class="dev_button">
                         <a href="https://github.com/tree0303">
                             <i class="fa-brands fa-github"></i>GitHub
+                        </a>
+                    </div>
+                    <div class="dev_button">
+                        <a href="https://twitter.com/tree1503">
+                            <i class="fa-brands fa-twitter"></i>Twitter
                         </a>
                     </div>
                 </div>
