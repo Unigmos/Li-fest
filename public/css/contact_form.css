@@ -1,3 +1,18 @@
+::-moz-placeholder {
+  color: #fcfaf7;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+:-ms-input-placeholder {
+  color: #fcfaf7;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
+::placeholder {
+  color: #fcfaf7;
+  font-family: "Kosugi Maru", sans-serif;
+}
+
 body {
   font-family: "Kosugi Maru", sans-serif;
   margin: 0;
@@ -7,10 +22,39 @@ body {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4);
 }
 
+input {
+  padding: 5px;
+  border: none;
+  outline: none;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+}
+
 textarea {
+  padding: 5px;
   resize: vertical;
   width: 100%;
   min-height: 200px;
+  max-height: 450px;
+  outline: none;
+  background-color: #d4d4d4;
+  border-radius: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+button {
+  font-family: "Kosugi Maru", sans-serif;
+  border: 1px solid #03cc90;
+  background-color: #fcfaf7;
+  border-radius: 5px;
+  padding: 5px 15px;
+}
+button:hover {
+  color: #fcfaf7;
+  background-color: #03cc90;
+  transition: 0.5s ease;
+  cursor: pointer;
 }
 
 .main_container {
