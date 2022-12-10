@@ -46,16 +46,17 @@ if (!isset($data)) {
 
     <main class="main_container">
         <div class="action_container">
-            <a class="action_button" href="/public/item_registerform.php">
-                <div class="action_content">
+            <div class="action_content">
+                <a class="action_button" href="/public/item_registerform.php">
                     <p text="+">新規追加</p>
-                </div>
-            </a>
-            <a class="action_button" href="#">
-                <div class="action_content">
+                </a>
+            </div>
+            
+            <div class="action_content">
+                <a class="action_button" href="#">
                     <p text="×">全削除</p>
-                </div>
-            </a>
+                </a>
+            </div>
         </div>
         <div class="menu">
             <?php
