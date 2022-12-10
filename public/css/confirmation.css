@@ -16,20 +16,36 @@ body {
 .main_container .action_container {
   display: flex;
 }
-.main_container .action_container .action_button {
-  border: 1px solid #6e6d6d;
+.main_container .action_container .action_content {
+  margin-right: 10px;
+  border-radius: 10px;
+  border: 1px solid #03cc90;
+}
+.main_container .action_container .action_content .action_button {
   display: block;
   text-decoration: none;
   padding: 2px;
-  margin-right: 10px;
 }
-.main_container .action_container .action_button p {
+.main_container .action_container .action_content .action_button p {
+  margin: 10px 15px;
   color: #030300;
 }
-.main_container .action_container .action_button p::before {
+.main_container .action_container .action_content .action_button p::before {
   content: attr(text);
   padding-right: 10px;
   color: #030300;
+}
+.main_container .action_container .action_content:hover {
+  background-color: #03cc90;
+  transition: 0.5s ease;
+}
+.main_container .action_container .action_content:hover p {
+  color: #fcfaf7;
+  transition: 0.5s ease;
+}
+.main_container .action_container .action_content:hover p::before {
+  color: #fcfaf7;
+  transition: 0.5s ease;
 }
 
 .menu {
@@ -70,7 +86,6 @@ body {
   .menu .box .box_content .box_data p {
     margin: 0;
     padding: 16px 0;
-    text-align: center;
   }
 }
 @media screen and (max-width: 960px) {

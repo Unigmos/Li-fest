@@ -18,18 +18,34 @@ body{
     margin-bottom: 30px;
     .action_container{
         display: flex;
-        .action_button{
-            border: 1px solid $button_border;
-            display: block;
-            text-decoration: none;
-            padding: 2px;
+        .action_content{
             margin-right: 10px;
-            p{
-                color: $font_color;
-                &::before{
-                    content: attr(text);
-                    padding-right: 10px;
+            border-radius: 10px;
+            border: 1px solid $logo_green;
+            .action_button{
+                display: block;
+                text-decoration: none;
+                padding: 2px;
+                p{
+                    margin: 10px 15px;
                     color: $font_color;
+                    &::before{
+                        content: attr(text);
+                        padding-right: 10px;
+                        color: $font_color;
+                    }
+                }
+            }
+            &:hover{
+                background-color: $logo_green;
+                transition: 0.5s ease;
+                p{
+                    color: $main_background;
+                    transition: 0.5s ease;
+                    &::before{
+                        color: $main_background;
+                        transition: 0.5s ease;
+                    }
                 }
             }
         }
@@ -73,7 +89,6 @@ body{
                     p{
                         margin: 0;
                         padding: 16px 0;
-                        text-align: center;
                     }
                 }
             }
