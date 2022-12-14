@@ -2,7 +2,7 @@
 <html lang="ja">
 <head>
     <!-- head -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/head.html");?>
     <link rel="stylesheet" href="css/dev_info.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
@@ -10,14 +10,14 @@
 </head>
 <body>
     <!-- header -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/header.html");?>
     <main class="main_container">
         <div class="dev_title">
             <h2>開発者情報</h2>
         </div>
         <div class="dev_box">
             <div class="dev_image">
-                <img src="/public/image/Shaneron-100x100.png" alt="ShaneronIcon">
+                <img src="/image/Shaneron-100x100.png" alt="ShaneronIcon">
             </div>
             <div class="dev_content">
                 <div class="dev_name">
@@ -47,7 +47,7 @@
 
         <div class="dev_box">
             <div class="dev_image">
-                <img src="/public/image/TreeHouse-460x460.png" alt="TreeHouseIcon">
+                <img src="/image/TreeHouse-460x460.png" alt="TreeHouseIcon">
             </div>
             <div class="dev_content">
                 <div class="dev_name">
@@ -77,6 +77,6 @@
         </div>
     </main>
     <!-- footer -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/footer.php");?>
 </body>
 </html>
