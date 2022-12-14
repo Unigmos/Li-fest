@@ -21,21 +21,17 @@ if (!isset($data)) {
 <html lang="ja">
 <head>
     <!-- head -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/head.html");?>
     <link rel="stylesheet" href="css/confirmation.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
     <script src="js/calc_cost.js" async></script>
     <script src="js/checkbox.js" async></script>
     <script src="js/resize_data_size.js" async></script>
     <script src="js/context_menu.js" async></script>
-    <script src="js/under_fix.js" async></script>
 </head>
 <body>
     <!-- header -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html"); ?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/header.html"); ?>
 
     <div id="context_menu">
         <ul>
@@ -47,7 +43,7 @@ if (!isset($data)) {
     <main class="main_container">
         <div class="action_container">
             <div class="action_content">
-                <a class="action_button" href="/public/item_registerform.php">
+                <a class="action_button" href="/item_registerform.php">
                     <p text="+">新規追加</p>
                 </a>
             </div>
@@ -124,6 +120,6 @@ if (!isset($data)) {
         </div>
     </main>
     <!-- footer -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/footer.php");?>
 </body>
 </html>
