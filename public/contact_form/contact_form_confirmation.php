@@ -14,16 +14,12 @@
 <html lang="ja">
 <head>
     <!-- head -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html";?>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/public/css/contact_form.css">
-    <script src="/public/js/under_fix.js" async></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/reuse/head.html";?>
+    <link rel="stylesheet" href="/css/contact_form.css">
 </head>
 <body>
     <!-- header -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html";?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/reuse/header.html";?>
     <main class="main_container">
         <div class="contact_title">
             <h2>お問い合わせ確認</h2>
@@ -41,6 +37,6 @@
         </div>
     </main>
     <!-- footer -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php";?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/reuse/footer.php";?>
 </body>
 </html>
