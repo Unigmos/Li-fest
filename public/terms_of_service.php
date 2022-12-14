@@ -2,12 +2,12 @@
 <html lang="ja">
 <head>
     <!-- head -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/head.html");?>
     <link rel="stylesheet" href="css/terms_of_service.css">
 </head>
 <body>
     <!-- header -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/header.html");?>
     <main class="main_container">
         <h2>利用規約</h2>
         <div class="date_box">
@@ -132,11 +132,11 @@
         </ol>
 
         <h3>第16条（お問い合わせ窓口）</h3>
-        <p>ご意見がございましたら、<a href="/public/contact_form/contact_form.php">こちら</a>からお問い合わせください。</p>
+        <p>ご意見がございましたら、<a href="/contact_form/contact_form.php">こちら</a>からお問い合わせください。</p>
 
         <p class="right_pos">以上</p>
     </main>
     <!-- footer -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/footer.php");?>
 </body>
 </html>
