@@ -6,7 +6,7 @@ unset($_SESSION['email']);
 unset($_SESSION['err']);
 // ログインしていたらリダイレクト
 if (isset($_COOKIE['user'])){
-    header("location: \public\confirmation.php");
+    header("location: confirmation.php");
     exit();
 }
 $token_byte = openssl_random_pseudo_bytes(16);
@@ -18,13 +18,13 @@ $_SESSION['csrf_token'] = $csrf_token;
 <html lang="ja">
 <head>
     <!-- head -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html";?>
-    <link rel="stylesheet" href="/public/css/accountstyle.css">
-    <script src="/public/js/checkinput.js" async></script>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/reuse/head.html";?>
+    <link rel="stylesheet" href="/css/accountstyle.css">
+    <script src="/js/checkinput.js" async></script>
 </head>
 <body>
     <!-- header -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html" ?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/reuse/header.html" ?>
     <main class="main_container">
         <div class="login_contener">
             <h1>
@@ -35,7 +35,7 @@ $_SESSION['csrf_token'] = $csrf_token;
                 生活を便利に過ごすために活用してみよう
             </h3>
             <div class="account_register_execution_content">
-                <form action="/public/receiver/account_register.php" method="post" name="account_register_form">
+                <form action="/receiver/account_register.php" method="post" name="account_register_form">
                     <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?>"/>
                     <div>
                         <input type="email" id="email" name="email" placeholder="メールアドレス" value="<?php echo $email?>" onkeyup="buttonavAilability()">
@@ -72,6 +72,6 @@ $_SESSION['csrf_token'] = $csrf_token;
         </div>
     </main>
     <!-- footer -->
-    <?php include $_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php";?>
+    <?php include $_SERVER["DOCUMENT_ROOT"]."/reuse/footer.php";?>
 </body>
 </html>
