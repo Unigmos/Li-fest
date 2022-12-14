@@ -12,13 +12,13 @@
 <html lang="ja">
 <head>
     <!-- head -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/head.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/head.html");?>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/replace.js" async></script>
 </head>
 <body>
     <!-- header -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/header.html");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/header.html");?>
     <main class="main_container">
         <div class="title_description">
             <h2>Li-festへようこそ！！</h2>
@@ -90,6 +90,6 @@
         </div>
     </main>
     <!-- footer -->
-    <?php include($_SERVER["DOCUMENT_ROOT"]."/public/reuse/footer.php");?>
+    <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/footer.php");?>
 </body>
 </html>
