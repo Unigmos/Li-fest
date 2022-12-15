@@ -15,6 +15,17 @@
     <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/head.html");?>
     <link rel="stylesheet" href="css/index.css">
     <script src="js/replace.js" async></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('.top_image').bxSlider({
+                auto: true,
+                pause: 5000,
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- header -->
@@ -32,6 +43,7 @@
         </div>
         <div class="top_image">
             <img src="image/Li-fest.png" alt="サムネイル">
+            <img src="image/example.png" alt="使用例">
         </div>
         <div class="how_to_use">
             <div class="how_to_use_title">
