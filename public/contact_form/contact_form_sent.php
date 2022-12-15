@@ -10,8 +10,10 @@
     mb_internal_encoding("UTF-8");
 
     $to = $_POST['email'];
+    $to_me = "contact@li-fest.com";
 
     $subject = "お問い合わせありがとうございます。";
+    $subject_me = "お問い合わせがありました。";
 
     $message = <<< EOM
     お問い合わせありがとうございます。
@@ -24,9 +26,20 @@
     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
     EOM;
 
+    $message_me = <<< EOM
+    お問い合わせ内容
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    【 メール 】
+    {$_POST["email"]}
+    【 お問い合わせ内容 】
+    {$_POST["message"]}
+    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+    EOM;
+
     $headers = "From: contact@li-fest.com";
 
     mb_send_mail($to, $subject, $message, $headers);
+    mb_send_mail($to_me, $subject_me, $message_me, $headers);
 
 ?>
 <!DOCTYPE html>
