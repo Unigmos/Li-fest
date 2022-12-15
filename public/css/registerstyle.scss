@@ -62,7 +62,7 @@ body{
         margin: auto;
         margin-top: 15%;
         width: 80%;
-        .item_form{
+        .item_form{//div
             display: block;
             width: 90%;
             padding: auto;
@@ -74,12 +74,13 @@ body{
                 justify-content: space-between;
                 margin-left: 5px;
                 margin-top: 30px; 
+                width: 100%;
                 label{
                     width: 30%;
                 }
                 .content{
                     width: 45%;
-                    display: flex;
+                    display: block;
                     padding: 15px;
                     width: 130%;
                     text-align: center;
@@ -87,18 +88,39 @@ body{
                     border-radius: 50vh;
                     font-size: 110%;
                 }
-                .button &:hover{
-                    background-color: $logo_green;
-                    transition: 0.5s ease;
-                    a{
-                        color: $main_background;
+            }
+            display: flex;
+            .buttons{
+                margin: 0 auto 10px auto;
+                max-width: 250px;
+                border-radius: 10px;
+                border: 2px solid $logo_green;
+                padding: 8px 15px;
+                color: $font_color;
+                background-color: $main_background;
+                text-decoration: none;
+                width: 200%;
+                font-size: large;
+                display: flex;
+                justify-content: space-between;
+                text-decoration: none;
+                display: block;
+                &:enabled{
+                    &:hover{
+                        background-color: $logo_green;
                         transition: 0.5s ease;
+                        a{
+                            color: $main_background;
+                            transition: 0.5s ease;
+                        }
                     }
                 }
             }
         }
     }
 }
+
+
 
 
 label{

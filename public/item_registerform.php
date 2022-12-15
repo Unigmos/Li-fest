@@ -1,10 +1,10 @@
 <?php
 session_start();
 // ログインしていなかったらリダイレクト
-if (!isset($_SESSION['user'])){
-    header("location: loginform.php");
-    exit();
-}
+// if (!isset($_SESSION['user'])){
+//     header("location: loginform.php");
+//     exit();
+// }
 $token_byte = openssl_random_pseudo_bytes(16);
 $csrf_token = bin2hex($token_byte);
 // セッションに保存
@@ -24,7 +24,7 @@ $_SESSION['csrf_token'] = $csrf_token;
     <?php include($_SERVER["DOCUMENT_ROOT"]."/reuse/header.html"); ?>
     <main class="main_container">
         <div class="items">
-            <form action="/public/receiver/item_register.php" method="post">
+            <form action="/receiver/item_register.php" method="post">
                 <input type="hidden" name="csrf_token" value="<?php echo $csrf_token ?>"/>
                 <div class="item_form">
                     <div class="item_name">
@@ -56,10 +56,10 @@ $_SESSION['csrf_token'] = $csrf_token;
                     </div>
                 </div>
                 <div class="item_form">
-                    <button type="button" onclick="location.href='item_registerform.php'" class="button" id="back_button">
+                    <button type="button" onclick="location.href='confirmation.php'" class="buttons" id="back_button">
                         戻る
                     </button>
-                    <input type="submit" value="登録" class="button">
+                    <input type="submit" value="登録" class="buttons">
                 </div>
             </form>
         </div>

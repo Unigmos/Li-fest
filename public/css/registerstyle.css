@@ -68,19 +68,21 @@ body {
   margin: auto;
   margin-top: 10%;
   border-bottom: 2px solid #6e6d6d;
+  display: flex;
 }
 .items form .item_form div {
   display: flex;
   justify-content: space-between;
   margin-left: 5px;
   margin-top: 30px;
+  width: 100%;
 }
 .items form .item_form div label {
   width: 30%;
 }
 .items form .item_form div .content {
   width: 45%;
-  display: flex;
+  display: block;
   padding: 15px;
   width: 130%;
   text-align: center;
@@ -88,11 +90,27 @@ body {
   border-radius: 50vh;
   font-size: 110%;
 }
-.button .items form .item_form div:hover {
+.items form .item_form .buttons {
+  margin: 0 auto 10px auto;
+  max-width: 250px;
+  border-radius: 10px;
+  border: 2px solid #03cc90;
+  padding: 8px 15px;
+  color: #030300;
+  background-color: #fcfaf7;
+  text-decoration: none;
+  width: 200%;
+  font-size: large;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  display: block;
+}
+.items form .item_form .buttons:enabled:hover {
   background-color: #03cc90;
   transition: 0.5s ease;
 }
-.button .items form .item_form div:hover a {
+.items form .item_form .buttons:enabled:hover a {
   color: #fcfaf7;
   transition: 0.5s ease;
 }
