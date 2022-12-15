@@ -5,7 +5,6 @@
 		header("Location: contact_form.php");
 		exit();
 	}
-    // TODO:メール送信の確認
 
     mb_language("Japanese");
     mb_internal_encoding("UTF-8");
@@ -26,6 +25,8 @@
     EOM;
 
     $headers = "From: contact@li-fest.com";
+
+    mb_send_mail($to, $subject, $message, $headers);
 
 ?>
 <!DOCTYPE html>
