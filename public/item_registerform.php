@@ -56,6 +56,9 @@ $_SESSION['csrf_token'] = $csrf_token;
                     </div>
                 </div>
                 <div class="item_form">
+                    <button type="button" onclick="location.href='item_registerform.php'" class="button" id="back_button">
+                        戻る
+                    </button>
                     <input type="submit" value="登録" class="button">
                 </div>
             </form>
