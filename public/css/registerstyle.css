@@ -88,6 +88,15 @@ body {
   border-radius: 50vh;
   font-size: 110%;
 }
+.button .items form .item_form div:hover {
+  background-color: #03cc90;
+  transition: 0.5s ease;
+}
+.button .items form .item_form div:hover a {
+  color: #fcfaf7;
+  transition: 0.5s ease;
+}
+
 label {
   display: block;
   padding: 15px;

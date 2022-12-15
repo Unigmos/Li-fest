@@ -87,8 +87,13 @@ body{
                     border-radius: 50vh;
                     font-size: 110%;
                 }
-                .button{
-                    // TODO:変更しようねー
+                .button &:hover{
+                    background-color: $logo_green;
+                    transition: 0.5s ease;
+                    a{
+                        color: $main_background;
+                        transition: 0.5s ease;
+                    }
                 }
             }
         }
